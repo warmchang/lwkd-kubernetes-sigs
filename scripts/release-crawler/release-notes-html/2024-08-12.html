@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Whats new in the last week</title>
+</head>
+
+<body>
+<h1>Latest Releases for 2024-08-12</h1><h2>kubernetes/kops</h2> <h3>Release notes for v1.30.0</h3><h4>2024-08-16</h4><h1 id="significant-changes">Significant changes</h1>
+
+<h2 id="version-updates">Version updates</h2>
+
+<p>kOps 1.30 adds support for kubernetes 1.30, and updates of most of the built-in components.</p>
+
+<p>This release also updates to the next generation AWS SDK (aws-sdk-go-v2), though we do not expect
+user-visible changes from this update.</p>
+
+<h2 id="improved-support-for-azure">Improved support for Azure</h2>
+
+<p>kOps on Azure has been significantly improved in this release.</p>
+
+<h2 id="embedded-asset-hashes">Embedded asset hashes</h2>
+
+<p>Hashes for many kubernetes assets have been embedded into the kOps binary.  When using
+a well-known asset, we no longer need to download the hash from a well-known location,
+which slightly speeds up kOps cluster creation, and also creates a stronger chain-of-trust.</p>
+
+<h1 id="breaking-changes">Breaking changes</h1>
+
+<p>None known.</p>
+
+<h1 id="known-issues">Known Issues</h1>
+
+<p>None known.</p>
+
+<h1 id="deprecations">Deprecations</h1>
+
+<ul>
+<li><p>Support for Kubernetes version 1.24 is deprecated and will be removed in kOps 1.30.</p></li>
+
+<li><p>Support for Kubernetes version 1.25 is deprecated and will be removed in kOps 1.31.</p></li>
+</ul>
+
+<h1 id="full-changelist">Full changelist</h1>
+
+<ul>
+<li>Update dependencies by @github-actions in <a href="https://github.com/kubernetes/kops/pull/16407" target="_blank">https://github.com/kubernetes/kops/pull/16407</a></li>
+<li>build(deps): bump peter-evans/create-pull-request from 6.0.1 to 6.0.2 by @dependabot in <a href="https://github.com/kubernetes/kops/pull/16408" target="_blank">https://github.com/kubernetes/kops/pull/16408</a></li>
+<li>build(deps): bump actions/checkout from 4.1.1 to 4.1.2 by @dependabot in <a href="https://github.com/kubernetes/kops/pull/16409" target="_blank">https://github.com/kubernetes/kops/pull/16409</a></li>
+<li>upgraded cert-manager to 1.12.9 by @idealhack in <a href="https://github.com/kubernetes/kops/pull/16410" target="_blank">https://github.com/kubernetes/kops/pull/16410</a></li>
+<li>aws/cert-manager: Tighten IAM permissions for cert-manager by @andsens in <a href="https://github.com/kubernetes/kops/pull/16412" target="_blank">https://github.com/kubernetes/kops/pull/16412</a></li>
+<li>Update golangci-lint to v1.57.1 by @hakman in <a href="https://github.com/kubernetes/kops/pull/16418" target="_blank">https://github.com/kubernetes/kops/pull/16418</a></li>
+<li>Update dependencies by @github-actions in <a href="https://github.com/kubernetes/kops/pull/16419" target="_blank">https://github.com/kubernetes/kops/pull/16419</a></li>
+<li>Migrate some packages to aws-sdk-go-v2 by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16420" target="_blank">https://github.com/kubernetes/kops/pull/16420</a></li>
+<li>build(deps): bump actions/dependency-review-action from 4.1.3 to 4.2.3 by @dependabot in <a href="https://github.com/kubernetes/kops/pull/16421" target="_blank">https://github.com/kubernetes/kops/pull/16421</a></li>
+<li>Migrate more packages to aws-sdk-go-v2 by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16423" target="_blank">https://github.com/kubernetes/kops/pull/16423</a></li>
+<li>refactor: move assets into their own package by @justinsb in <a href="https://github.com/kubernetes/kops/pull/16426" target="_blank">https://github.com/kubernetes/kops/pull/16426</a></li>
+<li>refactor: isolate asset construction out of cloudup by @justinsb in <a href="https://github.com/kubernetes/kops/pull/16428" target="_blank">https://github.com/kubernetes/kops/pull/16428</a></li>
+<li>Refactor: Move nodeUpConfigBuilder to nodemodel by @justinsb in <a href="https://github.com/kubernetes/kops/pull/16429" target="_blank">https://github.com/kubernetes/kops/pull/16429</a></li>
+<li>Migrate IMDS, command completion, and region validation to aws-sdk-go-v2 by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16430" target="_blank">https://github.com/kubernetes/kops/pull/16430</a></li>
+<li>Update dependencies by @github-actions in <a href="https://github.com/kubernetes/kops/pull/16431" target="_blank">https://github.com/kubernetes/kops/pull/16431</a></li>
+<li>chore: update testdata to stop using alpha versions by @justinsb in <a href="https://github.com/kubernetes/kops/pull/16433" target="_blank">https://github.com/kubernetes/kops/pull/16433</a></li>
+<li>Update EventBridge to aws-sdk-go-v2 by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16432" target="_blank">https://github.com/kubernetes/kops/pull/16432</a></li>
+<li>Migrate SQS and SSM to aws-sdk-go-v2 by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16434" target="_blank">https://github.com/kubernetes/kops/pull/16434</a></li>
+<li>chore: refactor MirroredAsset into assets by @justinsb in <a href="https://github.com/kubernetes/kops/pull/16436" target="_blank">https://github.com/kubernetes/kops/pull/16436</a></li>
+<li>Migrate IAM to aws-sdk-go-v2 by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16435" target="_blank">https://github.com/kubernetes/kops/pull/16435</a></li>
+<li>Migrate elbv2 to aws-sdk-go-v2 by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16437" target="_blank">https://github.com/kubernetes/kops/pull/16437</a></li>
+<li>build(deps): bump actions/dependency-review-action from 4.2.3 to 4.2.5 by @dependabot in <a href="https://github.com/kubernetes/kops/pull/16442" target="_blank">https://github.com/kubernetes/kops/pull/16442</a></li>
+<li>Migrate ELB to aws-sdk-go-v2 by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16441" target="_blank">https://github.com/kubernetes/kops/pull/16441</a></li>
+<li>Various aws-sdk-go-v2 fixes by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16443" target="_blank">https://github.com/kubernetes/kops/pull/16443</a></li>
+<li>Migrate aws-sdk-go/aws to aws-sdk-go-v2/aws by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16444" target="_blank">https://github.com/kubernetes/kops/pull/16444</a></li>
+<li>Update kube-router to v2.1.0 by @aauren in <a href="https://github.com/kubernetes/kops/pull/16440" target="_blank">https://github.com/kubernetes/kops/pull/16440</a></li>
+<li>Migrate autoscaling to aws-sdk-go-v2 by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16446" target="_blank">https://github.com/kubernetes/kops/pull/16446</a></li>
+<li>Migrate route53 to aws-sdk-go-v2 by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16448" target="_blank">https://github.com/kubernetes/kops/pull/16448</a></li>
+<li>Create assetdata by @justinsb in <a href="https://github.com/kubernetes/kops/pull/16438" target="_blank">https://github.com/kubernetes/kops/pull/16438</a></li>
+<li>Update Calico to v3.27.3 by @hakman in <a href="https://github.com/kubernetes/kops/pull/16363" target="_blank">https://github.com/kubernetes/kops/pull/16363</a></li>
+<li>Migrate node controller and identity to aws-sdk-go-v2 by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16451" target="_blank">https://github.com/kubernetes/kops/pull/16451</a></li>
+<li>Update dependencies by @github-actions in <a href="https://github.com/kubernetes/kops/pull/16452" target="_blank">https://github.com/kubernetes/kops/pull/16452</a></li>
+<li>Update images.md by @esbc-disciple in <a href="https://github.com/kubernetes/kops/pull/16454" target="_blank">https://github.com/kubernetes/kops/pull/16454</a></li>
+<li>azure: Various updates by @hakman in <a href="https://github.com/kubernetes/kops/pull/16456" target="_blank">https://github.com/kubernetes/kops/pull/16456</a></li>
+<li>Provide default region to route53 client by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16450" target="_blank">https://github.com/kubernetes/kops/pull/16450</a></li>
+<li>Update dependencies by @github-actions in <a href="https://github.com/kubernetes/kops/pull/16461" target="_blank">https://github.com/kubernetes/kops/pull/16461</a></li>
+<li>Migrate EC2 to aws-sdk-go-v2 by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16460" target="_blank">https://github.com/kubernetes/kops/pull/16460</a></li>
+<li>build(deps): bump peter-evans/create-pull-request from 6.0.2 to 6.0.3 by @dependabot in <a href="https://github.com/kubernetes/kops/pull/16462" target="_blank">https://github.com/kubernetes/kops/pull/16462</a></li>
+<li>kube-router: fix version and cluster ip range by @aauren in <a href="https://github.com/kubernetes/kops/pull/16467" target="_blank">https://github.com/kubernetes/kops/pull/16467</a></li>
+<li>nodeup: error message instead of segfault by @multi-io in <a href="https://github.com/kubernetes/kops/pull/16473" target="_blank">https://github.com/kubernetes/kops/pull/16473</a></li>
+<li>azure: Use lowercase for node names by @hakman in <a href="https://github.com/kubernetes/kops/pull/16469" target="_blank">https://github.com/kubernetes/kops/pull/16469</a></li>
+<li>Migrate usage of aws-sdk-go/aws/endpoints by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16480" target="_blank">https://github.com/kubernetes/kops/pull/16480</a></li>
+<li>build(deps): bump peter-evans/create-pull-request from 6.0.3 to 6.0.4 by @dependabot in <a href="https://github.com/kubernetes/kops/pull/16482" target="_blank">https://github.com/kubernetes/kops/pull/16482</a></li>
+<li>build(deps): bump actions/checkout from 4.1.2 to 4.1.3 by @dependabot in <a href="https://github.com/kubernetes/kops/pull/16481" target="_blank">https://github.com/kubernetes/kops/pull/16481</a></li>
+<li>Update dependencies for K8s v1.30.0 by @hakman in <a href="https://github.com/kubernetes/kops/pull/16485" target="_blank">https://github.com/kubernetes/kops/pull/16485</a></li>
+<li>chore: fix function names in comment by @racequite in <a href="https://github.com/kubernetes/kops/pull/16476" target="_blank">https://github.com/kubernetes/kops/pull/16476</a></li>
+<li>tests: add unit test for aws authenticator by @justinsb in <a href="https://github.com/kubernetes/kops/pull/16487" target="_blank">https://github.com/kubernetes/kops/pull/16487</a></li>
+<li>Fix getting crictl assets by @h3poteto in <a href="https://github.com/kubernetes/kops/pull/16486" target="_blank">https://github.com/kubernetes/kops/pull/16486</a></li>
+<li>Fix function name in comment by @cuiyourong in <a href="https://github.com/kubernetes/kops/pull/16489" target="_blank">https://github.com/kubernetes/kops/pull/16489</a></li>
+<li>Update dependencies by @github-actions in <a href="https://github.com/kubernetes/kops/pull/16492" target="_blank">https://github.com/kubernetes/kops/pull/16492</a></li>
+<li>aliyun: Remove some leftovers by @hakman in <a href="https://github.com/kubernetes/kops/pull/16493" target="_blank">https://github.com/kubernetes/kops/pull/16493</a></li>
+<li>build(deps): bump actions/dependency-review-action from 4.2.5 to 4.3.0 by @dependabot in <a href="https://github.com/kubernetes/kops/pull/16500" target="_blank">https://github.com/kubernetes/kops/pull/16500</a></li>
+<li>build(deps): bump actions/checkout from 4.1.3 to 4.1.4 by @dependabot in <a href="https://github.com/kubernetes/kops/pull/16501" target="_blank">https://github.com/kubernetes/kops/pull/16501</a></li>
+<li>build(deps): bump peter-evans/create-pull-request from 6.0.4 to 6.0.5 by @dependabot in <a href="https://github.com/kubernetes/kops/pull/16499" target="_blank">https://github.com/kubernetes/kops/pull/16499</a></li>
+<li>kube-router: bump version v2.1.0 -&gt; v2.1.1 by @aauren in <a href="https://github.com/kubernetes/kops/pull/16503" target="_blank">https://github.com/kubernetes/kops/pull/16503</a></li>
+<li>all: fix function names by @knowmost in <a href="https://github.com/kubernetes/kops/pull/16502" target="_blank">https://github.com/kubernetes/kops/pull/16502</a></li>
+<li>chore: optimize the method for obtaining gopath by @weidongkl in <a href="https://github.com/kubernetes/kops/pull/16504" target="_blank">https://github.com/kubernetes/kops/pull/16504</a></li>
+<li>Update dependencies by @github-actions in <a href="https://github.com/kubernetes/kops/pull/16507" target="_blank">https://github.com/kubernetes/kops/pull/16507</a></li>
+<li>Support multiple service-account-issuers in apiserver by @zetaab in <a href="https://github.com/kubernetes/kops/pull/16497" target="_blank">https://github.com/kubernetes/kops/pull/16497</a></li>
+<li>chore: update fileAssets documentation by @mostafahussein in <a href="https://github.com/kubernetes/kops/pull/16506" target="_blank">https://github.com/kubernetes/kops/pull/16506</a></li>
+<li>azure: Fix instance deletion by @hakman in <a href="https://github.com/kubernetes/kops/pull/16510" target="_blank">https://github.com/kubernetes/kops/pull/16510</a></li>
+<li>aws: Update components before release by @hakman in <a href="https://github.com/kubernetes/kops/pull/16513" target="_blank">https://github.com/kubernetes/kops/pull/16513</a></li>
+<li>Support AuthenticationConfig in APIserver by @zetaab in <a href="https://github.com/kubernetes/kops/pull/16514" target="_blank">https://github.com/kubernetes/kops/pull/16514</a></li>
+<li>Update Cilium to v1.15.4 by @hakman in <a href="https://github.com/kubernetes/kops/pull/16515" target="_blank">https://github.com/kubernetes/kops/pull/16515</a></li>
+<li>Update metrics-server to v0.7.1 by @hakman in <a href="https://github.com/kubernetes/kops/pull/16518" target="_blank">https://github.com/kubernetes/kops/pull/16518</a></li>
+<li>build(deps): bump actions/setup-go from 5.0.0 to 5.0.1 by @dependabot in <a href="https://github.com/kubernetes/kops/pull/16522" target="_blank">https://github.com/kubernetes/kops/pull/16522</a></li>
+<li>cert-manager: Add option to set feature gates by @hakman in <a href="https://github.com/kubernetes/kops/pull/16520" target="_blank">https://github.com/kubernetes/kops/pull/16520</a></li>
+<li>hetzner: Update components before release  by @hakman in <a href="https://github.com/kubernetes/kops/pull/16523" target="_blank">https://github.com/kubernetes/kops/pull/16523</a></li>
+<li>Migrate AWS Verifier to aws-sdk-go-v2 by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16483" target="_blank">https://github.com/kubernetes/kops/pull/16483</a></li>
+<li>chore: fix function names by @luchenhan in <a href="https://github.com/kubernetes/kops/pull/16505" target="_blank">https://github.com/kubernetes/kops/pull/16505</a></li>
+<li>dns: Update components before release by @hakman in <a href="https://github.com/kubernetes/kops/pull/16525" target="_blank">https://github.com/kubernetes/kops/pull/16525</a></li>
+<li>Update etcd to v3.5.13 by @hakman in <a href="https://github.com/kubernetes/kops/pull/16527" target="_blank">https://github.com/kubernetes/kops/pull/16527</a></li>
+<li>Update cluster-autoscaler to v1.30.0 by @hakman in <a href="https://github.com/kubernetes/kops/pull/16530" target="_blank">https://github.com/kubernetes/kops/pull/16530</a></li>
+<li>Increase QPS - reduce total test duration by @hakuna-matatah in <a href="https://github.com/kubernetes/kops/pull/16532" target="_blank">https://github.com/kubernetes/kops/pull/16532</a></li>
+<li>Fix postsubmit jobs by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16534" target="_blank">https://github.com/kubernetes/kops/pull/16534</a></li>
+<li>Update containerd to v1.7.16 by @hakman in <a href="https://github.com/kubernetes/kops/pull/16531" target="_blank">https://github.com/kubernetes/kops/pull/16531</a></li>
+<li>nodeup: Check if /run/systemd/resolve/resolv.conf exists on the node and use it by @zak905 in <a href="https://github.com/kubernetes/kops/pull/16495" target="_blank">https://github.com/kubernetes/kops/pull/16495</a></li>
+<li>Update node-problem-detector to v0.8.18 by @hakman in <a href="https://github.com/kubernetes/kops/pull/16537" target="_blank">https://github.com/kubernetes/kops/pull/16537</a></li>
+<li>Use addon versions for git repo clone in e2e scenarios by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16544" target="_blank">https://github.com/kubernetes/kops/pull/16544</a></li>
+<li>Initial support for Ubuntu 24.04 (Noble Numbat) by @hakman in <a href="https://github.com/kubernetes/kops/pull/16542" target="_blank">https://github.com/kubernetes/kops/pull/16542</a></li>
+<li>Bump channels with April 2024 releases by @hakman in <a href="https://github.com/kubernetes/kops/pull/16547" target="_blank">https://github.com/kubernetes/kops/pull/16547</a></li>
+<li>Bump golang to 1.22.3 by @justinsb in <a href="https://github.com/kubernetes/kops/pull/16549" target="_blank">https://github.com/kubernetes/kops/pull/16549</a></li>
+<li>Update gcp-csi driver patch version to 1.10.13 by @justinsb in <a href="https://github.com/kubernetes/kops/pull/16551" target="_blank">https://github.com/kubernetes/kops/pull/16551</a></li>
+<li>Update dependencies by @github-actions in <a href="https://github.com/kubernetes/kops/pull/16552" target="_blank">https://github.com/kubernetes/kops/pull/16552</a></li>
+<li>chore: Replace square/go-jose.v2 with go-jose/go-jose/v4 by @hakman in <a href="https://github.com/kubernetes/kops/pull/16555" target="_blank">https://github.com/kubernetes/kops/pull/16555</a></li>
+<li>cluster-autoscaler: Fix priority expander config by @hakman in <a href="https://github.com/kubernetes/kops/pull/16556" target="_blank">https://github.com/kubernetes/kops/pull/16556</a></li>
+<li>Use embedded hashes for our well-known assets by @justinsb in <a href="https://github.com/kubernetes/kops/pull/16439" target="_blank">https://github.com/kubernetes/kops/pull/16439</a></li>
+<li>Release 1.30.0-alpha.1 by @hakman in <a href="https://github.com/kubernetes/kops/pull/16563" target="_blank">https://github.com/kubernetes/kops/pull/16563</a></li>
+<li>build(deps): bump actions/checkout from 4.1.4 to 4.1.5 by @dependabot in <a href="https://github.com/kubernetes/kops/pull/16565" target="_blank">https://github.com/kubernetes/kops/pull/16565</a></li>
+<li>Update dependencies by @github-actions in <a href="https://github.com/kubernetes/kops/pull/16566" target="_blank">https://github.com/kubernetes/kops/pull/16566</a></li>
+<li>fix KOPS_AWS_ROLE_ARN assume behaviour by @zetaab in <a href="https://github.com/kubernetes/kops/pull/16568" target="_blank">https://github.com/kubernetes/kops/pull/16568</a></li>
+<li>azure: Limit VMSS scope to specific storage account by @hakman in <a href="https://github.com/kubernetes/kops/pull/16567" target="_blank">https://github.com/kubernetes/kops/pull/16567</a></li>
+<li>tests: use version from go.mod in github actions by @justinsb in <a href="https://github.com/kubernetes/kops/pull/16550" target="_blank">https://github.com/kubernetes/kops/pull/16550</a></li>
+<li>Upgrade node-termination-handler to 1.22.0 by @jim-barber-he in <a href="https://github.com/kubernetes/kops/pull/16572" target="_blank">https://github.com/kubernetes/kops/pull/16572</a></li>
+<li>add service account issuer migration doc by @elliotdobson in <a href="https://github.com/kubernetes/kops/pull/16541" target="_blank">https://github.com/kubernetes/kops/pull/16541</a></li>
+<li>fix service account issuer migration doc nav by @elliotdobson in <a href="https://github.com/kubernetes/kops/pull/16573" target="_blank">https://github.com/kubernetes/kops/pull/16573</a></li>
+<li>docs: Update release notes to reflect release of 1.29 by @justinsb in <a href="https://github.com/kubernetes/kops/pull/16574" target="_blank">https://github.com/kubernetes/kops/pull/16574</a></li>
+<li>aws: Use EndpointResolverV2 for enabling dual-stack by @hakman in <a href="https://github.com/kubernetes/kops/pull/16575" target="_blank">https://github.com/kubernetes/kops/pull/16575</a></li>
+<li>Update dependencies by @github-actions in <a href="https://github.com/kubernetes/kops/pull/16576" target="_blank">https://github.com/kubernetes/kops/pull/16576</a></li>
+<li>build(deps): bump actions/checkout from 4.1.5 to 4.1.6 by @dependabot in <a href="https://github.com/kubernetes/kops/pull/16579" target="_blank">https://github.com/kubernetes/kops/pull/16579</a></li>
+<li>aws: Experiment with Adaptive retry mode by @hakman in <a href="https://github.com/kubernetes/kops/pull/16580" target="_blank">https://github.com/kubernetes/kops/pull/16580</a></li>
+<li>aws node handshake: support both v1 and v2 signatures, default to v1 by @justinsb in <a href="https://github.com/kubernetes/kops/pull/16577" target="_blank">https://github.com/kubernetes/kops/pull/16577</a></li>
+<li>tests: add mock for STS to better test node handshake by @justinsb in <a href="https://github.com/kubernetes/kops/pull/16578" target="_blank">https://github.com/kubernetes/kops/pull/16578</a></li>
+<li>Enabling statefulsets without pvs for load tests. by @hakuna-matatah in <a href="https://github.com/kubernetes/kops/pull/16598" target="_blank">https://github.com/kubernetes/kops/pull/16598</a></li>
+<li>[DOCS] Add docs for Debian 12 on AWS by @dannyeuu in <a href="https://github.com/kubernetes/kops/pull/16600" target="_blank">https://github.com/kubernetes/kops/pull/16600</a></li>
+<li>Make ASG Warmpool depend on ASG Lifecycle hook by @jim-barber-he in <a href="https://github.com/kubernetes/kops/pull/16583" target="_blank">https://github.com/kubernetes/kops/pull/16583</a></li>
+<li>Update dependencies by @hakman in <a href="https://github.com/kubernetes/kops/pull/16607" target="_blank">https://github.com/kubernetes/kops/pull/16607</a></li>
+<li>feat(components): permit to define kube-controller-manager and kube-scheduler resources by @chubchubsancho in <a href="https://github.com/kubernetes/kops/pull/16605" target="_blank">https://github.com/kubernetes/kops/pull/16605</a></li>
+<li>chore: Bump alpha channel with June releases by @hakman in <a href="https://github.com/kubernetes/kops/pull/16611" target="_blank">https://github.com/kubernetes/kops/pull/16611</a></li>
+<li>Update dependencies by @github-actions in <a href="https://github.com/kubernetes/kops/pull/16614" target="_blank">https://github.com/kubernetes/kops/pull/16614</a></li>
+<li>Update aws-iam-authenticator image by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16615" target="_blank">https://github.com/kubernetes/kops/pull/16615</a></li>
+<li>chore: Promote alpha channel to stable by @hakman in <a href="https://github.com/kubernetes/kops/pull/16617" target="_blank">https://github.com/kubernetes/kops/pull/16617</a></li>
+<li>chore: Update Go to v1.21.4 by @hakman in <a href="https://github.com/kubernetes/kops/pull/16618" target="_blank">https://github.com/kubernetes/kops/pull/16618</a></li>
+<li>Add support for Rocky 9 by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16620" target="_blank">https://github.com/kubernetes/kops/pull/16620</a></li>
+<li>Dont install libcgroup on Rocky 9 by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16621" target="_blank">https://github.com/kubernetes/kops/pull/16621</a></li>
+<li>build(deps): bump actions/checkout from 4.1.6 to 4.1.7 by @dependabot in <a href="https://github.com/kubernetes/kops/pull/16622" target="_blank">https://github.com/kubernetes/kops/pull/16622</a></li>
+<li>tests: Add test for dl.k8s.io kubernetes version parsing by @justinsb in <a href="https://github.com/kubernetes/kops/pull/16624" target="_blank">https://github.com/kubernetes/kops/pull/16624</a></li>
+<li>Raise errors earlier if we cannot parse the kube version by @justinsb in <a href="https://github.com/kubernetes/kops/pull/16625" target="_blank">https://github.com/kubernetes/kops/pull/16625</a></li>
+<li>Update dependencies by @github-actions in <a href="https://github.com/kubernetes/kops/pull/16626" target="_blank">https://github.com/kubernetes/kops/pull/16626</a></li>
+<li>Upgrade Cilium to v1.15.6 by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16627" target="_blank">https://github.com/kubernetes/kops/pull/16627</a></li>
+<li>Release 1.30.0-beta.1 by @justinsb in <a href="https://github.com/kubernetes/kops/pull/16629" target="_blank">https://github.com/kubernetes/kops/pull/16629</a></li>
+<li>Automated cherry pick of #16649: chore: update golang to 1.22.5 by @justinsb in <a href="https://github.com/kubernetes/kops/pull/16654" target="_blank">https://github.com/kubernetes/kops/pull/16654</a></li>
+<li>Automated cherry pick of #16670: Fix cluster-autoscaler priority expander config by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16671" target="_blank">https://github.com/kubernetes/kops/pull/16671</a></li>
+<li>Automated cherry pick of #16661: Bump cloudbuild to go 1.22.5 by @justinsb in <a href="https://github.com/kubernetes/kops/pull/16685" target="_blank">https://github.com/kubernetes/kops/pull/16685</a></li>
+<li>Automated cherry pick of #16681: Add new API field for VPC CNI&rsquo;s network policy agent by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16688" target="_blank">https://github.com/kubernetes/kops/pull/16688</a></li>
+<li>Automated cherry pick of #16682: Add the hubble-metrics service for cilium by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16686" target="_blank">https://github.com/kubernetes/kops/pull/16686</a></li>
+<li>Automated cherry pick of #16712:  Update AWS EBS CSI Driver to 1.33.0 by @rifelpet in <a href="https://github.com/kubernetes/kops/pull/16713" target="_blank">https://github.com/kubernetes/kops/pull/16713</a></li>
+<li>Automated cherry pick of #16737: fix bootstrap already exists handling by @jauru in <a href="https://github.com/kubernetes/kops/pull/16738" target="_blank">https://github.com/kubernetes/kops/pull/16738</a></li>
+<li>Automated cherry pick of #16693: feat(cluster-autoscaler) Implement emitPerNodegroupMetrics by @hakman in <a href="https://github.com/kubernetes/kops/pull/16748" target="_blank">https://github.com/kubernetes/kops/pull/16748</a></li>
+<li>Automated cherry pick of #16743: fix(cert-manager-webhook): fix label name to bypass LBC by @hakman in <a href="https://github.com/kubernetes/kops/pull/16752" target="_blank">https://github.com/kubernetes/kops/pull/16752</a></li>
+<li>Release 1.30.0 by @justinsb in <a href="https://github.com/kubernetes/kops/pull/16756" target="_blank">https://github.com/kubernetes/kops/pull/16756</a></li>
+</ul>
+
+<h2 id="new-contributors">New Contributors</h2>
+
+<ul>
+<li>@esbc-disciple made their first contribution in <a href="https://github.com/kubernetes/kops/pull/16454" target="_blank">https://github.com/kubernetes/kops/pull/16454</a></li>
+<li>@multi-io made their first contribution in <a href="https://github.com/kubernetes/kops/pull/16473" target="_blank">https://github.com/kubernetes/kops/pull/16473</a></li>
+<li>@racequite made their first contribution in <a href="https://github.com/kubernetes/kops/pull/16476" target="_blank">https://github.com/kubernetes/kops/pull/16476</a></li>
+<li>@cuiyourong made their first contribution in <a href="https://github.com/kubernetes/kops/pull/16489" target="_blank">https://github.com/kubernetes/kops/pull/16489</a></li>
+<li>@knowmost made their first contribution in <a href="https://github.com/kubernetes/kops/pull/16502" target="_blank">https://github.com/kubernetes/kops/pull/16502</a></li>
+<li>@weidongkl made their first contribution in <a href="https://github.com/kubernetes/kops/pull/16504" target="_blank">https://github.com/kubernetes/kops/pull/16504</a></li>
+<li>@luchenhan made their first contribution in <a href="https://github.com/kubernetes/kops/pull/16505" target="_blank">https://github.com/kubernetes/kops/pull/16505</a></li>
+<li>@elliotdobson made their first contribution in <a href="https://github.com/kubernetes/kops/pull/16541" target="_blank">https://github.com/kubernetes/kops/pull/16541</a></li>
+<li>@dannyeuu made their first contribution in <a href="https://github.com/kubernetes/kops/pull/16600" target="_blank">https://github.com/kubernetes/kops/pull/16600</a></li>
+</ul>
+
+<p><strong>Full Changelog</strong>: <a href="https://github.com/kubernetes/kops/compare/v1.29.0...v1.30.0" target="_blank">https://github.com/kubernetes/kops/compare/v1.29.0&hellip;v1.30.0</a></p>
+<br><h2>kubernetes/cloud-provider-aws</h2> <h3>Release notes for v1.31.0</h3><h4>2024-08-17</h4><h2 id="what-s-changed">What&rsquo;s Changed</h2>
+
+<ul>
+<li>Update upstream dependencies to 1.31.0 by @shizuchanw in <a href="https://github.com/kubernetes/cloud-provider-aws/pull/1016" target="_blank">https://github.com/kubernetes/cloud-provider-aws/pull/1016</a></li>
+<li>Release v1.31.0 by @shizuchanw in <a href="https://github.com/kubernetes/cloud-provider-aws/pull/1017" target="_blank">https://github.com/kubernetes/cloud-provider-aws/pull/1017</a></li>
+</ul>
+
+<p><strong>Full Changelog</strong>: <a href="https://github.com/kubernetes/cloud-provider-aws/compare/v1.31.0-rc.0...v1.31.0" target="_blank">https://github.com/kubernetes/cloud-provider-aws/compare/v1.31.0-rc.0&hellip;v1.31.0</a></p>
+<br><h2>kubernetes/cloud-provider-vsphere</h2> <h3>Release notes for v1.31.0</h3><h4>2024-08-14</h4><h2 id="what-s-changed">What&rsquo;s Changed</h2>
+
+<ul>
+<li>:seedling: Bump github.com/onsi/gomega from 1.32.0 to 1.33.0 in /test/e2e by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/983" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/983</a></li>
+<li>update dependent bot by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/985" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/985</a></li>
+<li>:seedling: Bump github.com/vmware/govmomi from 0.36.3 to 0.37.1 in /test/e2e by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/992" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/992</a></li>
+<li>:seedling: Bump github.com/vmware/govmomi from 0.37.0 to 0.37.1 by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/987" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/987</a></li>
+<li>Add additional members to maintainers alias by @sunjayBhatia in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/943" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/943</a></li>
+<li>:seedling: Bump github.com/onsi/gomega from 1.33.0 to 1.33.1 in /test/e2e by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1002" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1002</a></li>
+<li>add skriss to maintainers alias by @skriss in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1004" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1004</a></li>
+<li>Fix node name didn&rsquo;t get deleted from node map when node deleted by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/997" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/997</a></li>
+<li>Add gcp cloud build configuration for vsphere cloud provider by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/999" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/999</a></li>
+<li>Add nightly cloud build yaml by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1016" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1016</a></li>
+<li>Add pull request cloudbuild configuration for cloud provider vsphere by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1017" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1017</a></li>
+<li>:seedling: Bump github.com/vmware/govmomi from 0.37.1 to 0.37.2 by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1020" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1020</a></li>
+<li>change vsphere cpi image path by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1018" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1018</a></li>
+<li>Add kpromo script by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1024" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1024</a></li>
+<li>Add kpromo action by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1025" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1025</a></li>
+<li>:seedling: Bump github.com/onsi/ginkgo/v2 from 2.17.2 to 2.17.3 in /test/e2e by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1012" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1012</a></li>
+<li>fix kpromo action by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1026" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1026</a></li>
+<li>fix virtual machine service can&rsquo;t be created issue by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1028" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1028</a></li>
+<li>:seedling: Bump the kubernetes group with 6 updates by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1031" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1031</a></li>
+<li>test: remove helm go dependency in e2e test by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1046" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1046</a></li>
+<li>test: use a daemonset and kubectl exec to provide images for ci test by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1045" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1045</a></li>
+<li>test: Update e2e test to run against 1.30 and latest 1.31 by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1047" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1047</a></li>
+<li>Add hack/tools module to dependabot config by @sunjayBhatia in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1051" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1051</a></li>
+<li>:seedling: Bump github.com/onsi/ginkgo/v2 from 2.17.3 to 2.19.0 in /test/e2e by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1055" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1055</a></li>
+<li>:seedling: Bump sigs.k8s.io/kind from 0.11.0 to 0.23.0 in /hack/tools by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1052" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1052</a></li>
+<li>:seedling: Bump github.com/onsi/ginkgo/v2 from 2.11.0 to 2.19.0 in /hack/tools by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1053" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1053</a></li>
+<li>automatic generate release notes by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1056" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1056</a></li>
+<li>clean up scripts to push image for vmware registry by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1049" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1049</a></li>
+<li>fix integration test by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1061" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1061</a></li>
+<li>test/e2e: Bump k8s 0.30.1 by @sunjayBhatia in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1050" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1050</a></li>
+<li>update all the image registry related document by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1060" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1060</a></li>
+<li>fix helm chart release by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1062" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1062</a></li>
+<li>verify generate release note github action by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1058" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1058</a></li>
+<li>🌱 Use absolute paths in tests by @sbueringer in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1063" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1063</a></li>
+<li>add github action to auto sync doc changes to gh-pages by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1059" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1059</a></li>
+<li>:seedling: Bump github.com/vmware/govmomi from 0.37.2 to 0.37.3 by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1068" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1068</a></li>
+<li>⚙️ Add a script to auto change all the docs, helm chart and readme by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1066" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1066</a></li>
+<li>:seedling: Bump sigs.k8s.io/controller-runtime from 0.18.3 to 0.18.4 in /test/e2e by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1076" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1076</a></li>
+<li>:seedling: Bump github.com/vmware/govmomi from 0.37.2 to 0.37.3 in /test/e2e by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1077" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1077</a></li>
+<li>test/e2e: use vSphere projects from Boskos by @sbueringer in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1067" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1067</a></li>
+<li>fix kpromo action by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1091" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1091</a></li>
+<li>fix update docs script by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1094" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1094</a></li>
+<li>fix generate release notes github action by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1096" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1096</a></li>
+<li>fix release github action by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1099" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1099</a></li>
+<li>:seedling:(deps) Bump the Kubernetes group to  by @github-actions in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1101" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1101</a></li>
+<li>:seedling: Bump the kubernetes group in /test/e2e with 4 updates by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1115" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1115</a></li>
+<li>:seedling: Bump github.com/spf13/cobra from 1.8.0 to 1.8.1 by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1109" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1109</a></li>
+<li>:seedling: Bump the kubernetes group with 6 updates by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1108" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1108</a></li>
+<li>fix generate release note action by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1117" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1117</a></li>
+<li>:seedling:(deps)test: Bump the kubernetes group to v2.130.1 for e2e test by @github-actions in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1121" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1121</a></li>
+<li>:seedling:(deps) Bump the Kubernetes group to  by @github-actions in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1122" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1122</a></li>
+<li>:seedling: Bump github.com/vmware/govmomi from 0.37.3 to 0.38.0 in /test/e2e by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1124" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1124</a></li>
+<li>⚙️ CI: remove VSPHERE_TLS_THUMBPRINT default value and switch to sha256 by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1127" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1127</a></li>
+<li>✨ vm-operator: migrate to vm-operator v1alpha2 api by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1126" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1126</a></li>
+<li>:seedling: Bump github.com/vmware/govmomi from 0.37.3 to 0.38.0 by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1130" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1130</a></li>
+<li>Fix the unknown revision error by @DanielXiao in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1139" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1139</a></li>
+<li>⚙️ fix: downgrade vm op api to fix ci by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1140" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1140</a></li>
+<li>✨  Update daemonset.yaml to remove deprecated master selector by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1144" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1144</a></li>
+<li>⚙️  change ci tooling related image to cloud provider vsphere own registry by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1143" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1143</a></li>
+<li>🌱(deps) Bump the Kubernetes group to v0.31.0-beta.0 by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1150" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1150</a></li>
+<li>Move DaemonSet affinities and tolerations to values.yaml to make them user manageable. by @FutureMatt in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1148" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1148</a></li>
+<li>:seedling: Bump the kubernetes group in /test/e2e with 3 updates by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1158" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1158</a></li>
+<li>:seedling: Bump github.com/vmware/govmomi from 0.38.0 to 0.39.0 in /test/e2e by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1159" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1159</a></li>
+<li>:seedling: Bump github.com/onsi/ginkgo/v2 from 2.19.0 to 2.19.1 in /hack/tools by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1160" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1160</a></li>
+<li>:seedling: Bump github.com/vmware/govmomi from 0.38.0 to 0.39.0 by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1161" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1161</a></li>
+<li>:seedling: Bump github.com/onsi/ginkgo/v2 from 2.19.0 to 2.19.1 in /test/e2e by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1163" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1163</a></li>
+<li>:seedling:(deps) Bump the Kubernetes group to v0.31.0-rc.0 by @github-actions in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1166" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1166</a></li>
+<li>:seedling: Bump github.com/onsi/gomega from 1.33.1 to 1.34.1 in /test/e2e by @dependabot in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1164" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1164</a></li>
+<li>:seedling:(deps) Bump the Kubernetes group to v0.31.0-rc.1 by @github-actions in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1169" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1169</a></li>
+<li>🌱 pre v1.31.0 release update by @XudongLiuHarold in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1179" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1179</a></li>
+</ul>
+
+<h2 id="new-contributors">New Contributors</h2>
+
+<ul>
+<li>@sunjayBhatia made their first contribution in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/943" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/943</a></li>
+<li>@FutureMatt made their first contribution in <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1148" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/pull/1148</a></li>
+</ul>
+
+<p><strong>Full Changelog</strong>: <a href="https://github.com/kubernetes/cloud-provider-vsphere/compare/v1.30.1...v1.31.0" target="_blank">https://github.com/kubernetes/cloud-provider-vsphere/compare/v1.30.1&hellip;v1.31.0</a></p>
+<br><h3>Release notes for vsphere-cpi-chart-1.31.0</h3><h4>2024-08-14</h4><p>A Helm chart for vSphere Cloud Provider Interface Manager (CPI)</p>
+<br><h2>grpc/grpc</h2> <h3>Release notes for Release v1.66.0-pre5</h3><h4>2024-08-16</h4><p>This is a prerelease of gRPC Core 1.66.0 (gladiator).</p>
+
+<p>For gRPC documentation, see <a href="https://grpc.io/" target="_blank">grpc.io</a>. For previous releases, see <a href="https://github.com/grpc/grpc/releases" target="_blank">Releases</a>.</p>
+
+<p>This prerelease contains refinements, improvements, and bug fixes.</p>
+<br><h3>Release notes for Release v1.65.5</h3><h4>2024-08-17</h4><p>This is release gRPC Core 1.65.5 (gnarly).</p>
+
+<p>For gRPC documentation, see <a href="https://grpc.io/" target="_blank">grpc.io</a>. For previous releases, see <a href="https://github.com/grpc/grpc/releases" target="_blank">Releases</a>.</p>
+
+<p>This release contains refinements, improvements, and bug fixes.</p>
+<br><h3>Release notes for Release v1.66.0-pre4</h3><h4>2024-08-15</h4><p>This is a prerelease of gRPC Core 1.66.0 (gladiator).</p>
+
+<p>For gRPC documentation, see <a href="https://grpc.io/" target="_blank">grpc.io</a>. For previous releases, see <a href="https://github.com/grpc/grpc/releases" target="_blank">Releases</a>.</p>
+
+<p>This prerelease contains refinements, improvements, and bug fixes.</p>
+<br><h2>containerd/nerdctl</h2> <h3>Release notes for v2.0.0-rc.1</h3><h4>2024-08-17</h4><h2 id="changes">Changes</h2>
+
+<p>nerdctl v2 enables &ldquo;detach-netns&rdquo; for Rootless mode by default (#2723).</p>
+
+<p>This will bring:</p>
+
+<ul>
+<li>Faster and more stable <code>nerdctl pull</code>, <code>nerdctl push</code>, <code>nerdctl build</code>, etc</li>
+<li>Proper support for <code>nerdctl pull 127.0.0.1:.../...</code></li>
+<li>Proper support for <code>nerdctl run --net=host</code></li>
+</ul>
+
+<p>Depends on RootlessKit &gt;= v2.0 and BuildKit &gt;= v0.13 (included in <code>nerdctl-full-*.tar.gz</code>).</p>
+
+<blockquote>
+<p>[!NOTE]
+After upgrading nerdctl (rootless mode) from v1.x to v2.x, it is highly recommended to
+re-install the systemd units and the configurations:</p>
+
+<pre><code>&gt; containerd-rootless-setuptool.sh uninstall
+&gt; rm -rf ~/.config/{nerdctl,buildkit}
+&gt; containerd-rootless-setuptool.sh install
+&gt; CONTAINERD_NAMESPACE=default containerd-rootless-setuptool.sh install-buildkit-containerd
+&gt; ```
+
+Other major changes:
+- `nerdctl run`:
+  - Add `--systemd` flag for running systemd in containers flag (#2785, thanks to @sazzy4o)
+  - Add`--ipc=(shareable|container:&lt;container&gt;)` flag (#2757, thanks to @minuk-dev)
+  - Add `--annotation` flag (#2906)
+     - Now `nerdctl run --label` is only set as a containerd label and not propagated as an OCI annotation. A label with the `nerdctl/` prefix can no longer be set manually, with an exception for `nerdctl/bypass4netns`. The `nerdctl/bypass4netns` label is still allowed and is propagated to an OCI annotation, for sake of compatibility.
+  - Add `--sig-proxy` flag (#3043, thanks to @CodeChanning)
+  - Propagate image labels to container labels (not to container annotations) (#3023, thanks to @yankay)
+  - Add `--attach` flag (#3157, thanks to @CodeChanning)
+  - The restriction for `--name` is relaxed to support longer names (#3279, thanks to @Shubhranshu153)
+- `nerdctl build`:
+  - Add `--attest`, `--sbom`, and `--provenance` flags (#2786, thanks to @yankay)
+  - Add `--pull` flag (#3074, thanks to @sondavidb)
+  - Support Windows (#2587, thanks to @TBBle)
+- `nerdctl ps`:
+  - JSON type of `--format=json` is changed for better Docker compatibility (#2987, #3058, thanks to @apostasie and @yankay)
+- `nerdctl inspect`:
+  - Add `--size` flag (#3021, thanks to @apostasie)
+- `nerdctl network`:
+  - The networks are now aware of containerd namespaces. i.e., `nerdctl --namespace=foo network list` no longer shows networks created with `nerdctl --namespace=bar network create` (#3096, thanks to @apostasie)
+  - Enhanced support for DHCP (#3001, thanks to @apostasie)
+- `nerdctl compose up`:
+  - Add `--abort-on-container-exit` flag (#2873, thanks to @alegrey91)
+- `nerdctl builder prune`:
+  - Add `--all` flag (#3316, thanks to @austinvazquez)
+  - Add `--force` flag (#3316, thanks to @austinvazquez)
+- `nerdctl image prune`:
+  - Add `--filter` flag (#3319, thanks to @austinvazquez)
+- nerdct-full:
+  - (See the `Included components` below)
+- And more!
+
+Full changes: https://github.com/containerd/nerdctl/milestone/37?closed=1
+Thanks to @CodeChanning @Iceber @Shikachuu @Shubhranshu153 @TBBle @THLIVSQAZ @TinaMor @abitrolly @alegrey91 @austinvazquez @apostasie @baijia @djdongjin @dmcgowan @fahedouch @frits-v @fwilhe2 @jmpargana @kebe7jun @ktock @lingdie @manugupt1 @midnight-wonderer @minuk-dev @monirul @qianxi0410 @roman-kiselenko @sazzy4o @sondavidb @testwill @thaJeztah @xyz-li @yankay @zjumoon01 @zwpaper
+
+## Compatible containerd versions
+This release of nerdctl is expected to be used with containerd v1.6, v1.7, or v2.0.
+
+## About the binaries
+- Minimal (`nerdctl-2.0.0-rc.1-linux-amd64.tar.gz`): nerdctl only
+- Full (`nerdctl-full-2.0.0-rc.1-linux-amd64.tar.gz`):    Includes dependencies such as containerd, runc, and CNI
+
+### Minimal
+Extract the archive to a path like `/usr/local/bin` or `~/bin` .
+&lt;details&gt;&lt;summary&gt;tar Cxzvvf /usr/local/bin nerdctl-2.0.0-rc.1-linux-amd64.tar.gz&lt;/summary&gt;
+&lt;p&gt;
+
+</code></pre>
+
+<p>-rwxr-xr-x root/root  25792664 2024-08-17 20:42 nerdctl
+-rwxr-xr-x root/root     22657 2024-08-17 20:42 containerd-rootless-setuptool.sh
+-rwxr-xr-x root/root      8708 2024-08-17 20:42 containerd-rootless.sh</p>
+
+<pre><code>&lt;/p&gt;
+&lt;/details&gt;
+
+### Full
+Extract the archive to a path like `/usr/local` or `~/.local` .
+
+&lt;details&gt;&lt;summary&gt;tar Cxzvvf /usr/local nerdctl-full-2.0.0-rc.1-linux-amd64.tar.gz&lt;/summary&gt;
+&lt;p&gt;
+
+</code></pre>
+
+<p>drwxr-xr-x 0/0               0 2024-08-17 20:50 bin/
+-rwxr-xr-x 0/0        29847294 2015-10-21 00:00 bin/buildctl
+-rwxr-xr-x 0/0        23724032 2022-09-05 09:52 bin/buildg
+lrwxrwxrwx 0/0               0 2024-08-17 20:49 bin/buildkit-cni-LICENSE -&gt; ../libexec/cni/LICENSE
+lrwxrwxrwx 0/0               0 2024-08-17 20:49 bin/buildkit-cni-README.md -&gt; ../libexec/cni/README.md
+lrwxrwxrwx 0/0               0 2024-08-17 20:49 bin/buildkit-cni-bandwidth -&gt; ../libexec/cni/bandwidth
+lrwxrwxrwx 0/0               0 2024-08-17 20:49 bin/buildkit-cni-bridge -&gt; ../libexec/cni/bridge
+lrwxrwxrwx 0/0               0 2024-08-17 20:49 bin/buildkit-cni-dhcp -&gt; ../libexec/cni/dhcp
+lrwxrwxrwx 0/0               0 2024-08-17 20:49 bin/buildkit-cni-dummy -&gt; ../libexec/cni/dummy
+lrwxrwxrwx 0/0               0 2024-08-17 20:49 bin/buildkit-cni-firewall -&gt; ../libexec/cni/firewall
+lrwxrwxrwx 0/0               0 2024-08-17 20:49 bin/buildkit-cni-host-device -&gt; ../libexec/cni/host-device
+lrwxrwxrwx 0/0               0 2024-08-17 20:49 bin/buildkit-cni-host-local -&gt; ../libexec/cni/host-local
+lrwxrwxrwx 0/0               0 2024-08-17 20:49 bin/buildkit-cni-ipvlan -&gt; ../libexec/cni/ipvlan
+lrwxrwxrwx 0/0               0 2024-08-17 20:49 bin/buildkit-cni-loopback -&gt; ../libexec/cni/loopback
+lrwxrwxrwx 0/0               0 2024-08-17 20:49 bin/buildkit-cni-macvlan -&gt; ../libexec/cni/macvlan
+lrwxrwxrwx 0/0               0 2024-08-17 20:49 bin/buildkit-cni-portmap -&gt; ../libexec/cni/portmap
+lrwxrwxrwx 0/0               0 2024-08-17 20:49 bin/buildkit-cni-ptp -&gt; ../libexec/cni/ptp
+lrwxrwxrwx 0/0               0 2024-08-17 20:49 bin/buildkit-cni-sbr -&gt; ../libexec/cni/sbr
+lrwxrwxrwx 0/0               0 2024-08-17 20:49 bin/buildkit-cni-static -&gt; ../libexec/cni/static
+lrwxrwxrwx 0/0               0 2024-08-17 20:49 bin/buildkit-cni-tap -&gt; ../libexec/cni/tap
+lrwxrwxrwx 0/0               0 2024-08-17 20:49 bin/buildkit-cni-tuning -&gt; ../libexec/cni/tuning
+lrwxrwxrwx 0/0               0 2024-08-17 20:49 bin/buildkit-cni-vlan -&gt; ../libexec/cni/vlan
+lrwxrwxrwx 0/0               0 2024-08-17 20:49 bin/buildkit-cni-vrf -&gt; ../libexec/cni/vrf
+-rwxr-xr-x 0/0        59650658 2015-10-21 00:00 bin/buildkitd
+-rwxr-xr-x 0/0        15311568 2024-08-17 20:48 bin/bypass4netns
+-rwxr-xr-x 0/0         5873816 2024-08-17 20:48 bin/bypass4netnsd
+-rwxr-xr-x 0/0        37802288 2024-08-17 20:49 bin/containerd
+-rwxr-xr-x 0/0         9474048 2023-11-02 17:34 bin/containerd-fuse-overlayfs-grpc
+-rwxr-xr-x 0/0           22657 2024-08-17 20:48 bin/containerd-rootless-setuptool.sh
+-rwxr-xr-x 0/0            8708 2024-08-17 20:48 bin/containerd-rootless.sh
+-rwxr-xr-x 0/0        13099160 2024-08-17 20:49 bin/containerd-shim-runc-v2
+-rwxr-xr-x 0/0        45903872 2023-10-31 08:57 bin/containerd-stargz-grpc
+-rwxr-xr-x 0/0        21810253 2024-08-17 20:50 bin/ctd-decoder
+-rwxr-xr-x 0/0        19042456 2024-08-17 20:48 bin/ctr
+-rwxr-xr-x 0/0        31133415 2024-08-17 20:50 bin/ctr-enc
+-rwxr-xr-x 0/0        19931136 2023-10-31 08:58 bin/ctr-remote
+-rwxr-xr-x 0/0         1789968 2024-08-17 20:50 bin/fuse-overlayfs
+-rwxr-xr-x 0/0        67381454 2024-08-17 20:49 bin/ipfs
+-rwxr-xr-x 0/0        25759896 2024-08-17 20:48 bin/nerdctl
+-rwxr-xr-x 0/0        11346380 2024-08-17 19:28 bin/rootlessctl
+-rwxr-xr-x 0/0        13089548 2024-08-17 19:28 bin/rootlesskit
+-rwxr-xr-x 0/0        15747848 2024-08-17 20:48 bin/runc
+-rwxr-xr-x 0/0         2354520 2024-08-17 20:50 bin/slirp4netns
+-rwxr-xr-x 0/0          870496 2024-08-17 20:50 bin/tini
+drwxr-xr-x 0/0               0 2024-08-17 20:49 lib/
+drwxr-xr-x 0/0               0 2024-08-17 20:49 lib/systemd/
+drwxr-xr-x 0/0               0 2024-08-17 20:49 lib/systemd/system/
+-rw-r&ndash;r&ndash; 0/0            1312 2024-08-17 20:49 lib/systemd/system/buildkit.service
+-rw-r&ndash;r&ndash; 0/0            1251 2024-08-17 20:47 lib/systemd/system/containerd.service
+-rw-r&ndash;r&ndash; 0/0             312 2024-08-17 20:49 lib/systemd/system/stargz-snapshotter.service
+drwxr-xr-x 0/0               0 2024-08-17 20:49 libexec/
+drwxr-xr-x 0/0               0 2024-08-17 20:49 libexec/cni/
+-rw-r&ndash;r&ndash; 0/0           11357 2024-06-17 15:51 libexec/cni/LICENSE
+-rw-r&ndash;r&ndash; 0/0            2343 2024-06-17 15:51 libexec/cni/README.md
+-rwxr-xr-x 0/0         4272898 2024-06-17 15:51 libexec/cni/bandwidth
+-rwxr-xr-x 0/0         4788191 2024-06-17 15:51 libexec/cni/bridge
+-rwxr-xr-x 0/0        11419738 2024-06-17 15:51 libexec/cni/dhcp
+-rwxr-xr-x 0/0         4424930 2024-06-17 15:51 libexec/cni/dummy
+-rwxr-xr-x 0/0         4943846 2024-06-17 15:51 libexec/cni/firewall
+-rwxr-xr-x 0/0         4345300 2024-06-17 15:51 libexec/cni/host-device
+-rwxr-xr-x 0/0         3679575 2024-06-17 15:51 libexec/cni/host-local
+-rwxr-xr-x 0/0         4443729 2024-06-17 15:51 libexec/cni/ipvlan
+-rwxr-xr-x 0/0         3750882 2024-06-17 15:51 libexec/cni/loopback
+-rwxr-xr-x 0/0         4480422 2024-06-17 15:51 libexec/cni/macvlan
+-rwxr-xr-x 0/0         4228332 2024-06-17 15:51 libexec/cni/portmap
+-rwxr-xr-x 0/0         4602833 2024-06-17 15:51 libexec/cni/ptp
+-rwxr-xr-x 0/0         3957166 2024-06-17 15:51 libexec/cni/sbr
+-rwxr-xr-x 0/0         3223947 2024-06-17 15:51 libexec/cni/static
+-rwxr-xr-x 0/0         4503742 2024-06-17 15:51 libexec/cni/tap
+-rwxr-xr-x 0/0         3838043 2024-06-17 15:51 libexec/cni/tuning
+-rwxr-xr-x 0/0         4440528 2024-06-17 15:51 libexec/cni/vlan
+-rwxr-xr-x 0/0         4103500 2024-06-17 15:51 libexec/cni/vrf
+drwxr-xr-x 0/0               0 2024-08-17 20:48 share/
+drwxr-xr-x 0/0               0 2024-08-17 20:48 share/doc/
+drwxr-xr-x 0/0               0 2024-08-17 20:48 share/doc/nerdctl/
+-rw-r&ndash;r&ndash; 0/0           11888 2024-08-17 20:42 share/doc/nerdctl/README.md
+drwxr-xr-x 0/0               0 2024-08-17 20:42 share/doc/nerdctl/docs/
+-rw-r&ndash;r&ndash; 0/0            3953 2024-08-17 20:42 share/doc/nerdctl/docs/build.md
+-rw-r&ndash;r&ndash; 0/0            2570 2024-08-17 20:42 share/doc/nerdctl/docs/builder-debug.md
+-rw-r&ndash;r&ndash; 0/0            4779 2024-08-17 20:42 share/doc/nerdctl/docs/cni.md
+-rw-r&ndash;r&ndash; 0/0           76892 2024-08-17 20:42 share/doc/nerdctl/docs/command-reference.md
+-rw-r&ndash;r&ndash; 0/0            1814 2024-08-17 20:42 share/doc/nerdctl/docs/compose.md
+-rw-r&ndash;r&ndash; 0/0            5329 2024-08-17 20:42 share/doc/nerdctl/docs/config.md
+-rw-r&ndash;r&ndash; 0/0            9128 2024-08-17 20:42 share/doc/nerdctl/docs/cosign.md
+-rw-r&ndash;r&ndash; 0/0            5660 2024-08-17 20:42 share/doc/nerdctl/docs/cvmfs.md
+-rw-r&ndash;r&ndash; 0/0            2776 2024-08-17 20:42 share/doc/nerdctl/docs/dir.md
+-rw-r&ndash;r&ndash; 0/0             906 2024-08-17 20:42 share/doc/nerdctl/docs/experimental.md
+-rw-r&ndash;r&ndash; 0/0           14217 2024-08-17 20:42 share/doc/nerdctl/docs/faq.md
+-rw-r&ndash;r&ndash; 0/0             884 2024-08-17 20:42 share/doc/nerdctl/docs/freebsd.md
+-rw-r&ndash;r&ndash; 0/0            3273 2024-08-17 20:42 share/doc/nerdctl/docs/gpu.md
+drwxr-xr-x 0/0               0 2024-08-17 20:42 share/doc/nerdctl/docs/images/
+-rw-r&ndash;r&ndash; 0/0            1462 2024-08-17 20:42 share/doc/nerdctl/docs/images/nerdctl.svg
+-rw-r&ndash;r&ndash; 0/0          684421 2024-08-17 20:42 share/doc/nerdctl/docs/images/rootlessKit-network-design.png
+-rw-r&ndash;r&ndash; 0/0           14462 2024-08-17 20:42 share/doc/nerdctl/docs/ipfs.md
+-rw-r&ndash;r&ndash; 0/0            1755 2024-08-17 20:42 share/doc/nerdctl/docs/multi-platform.md
+-rw-r&ndash;r&ndash; 0/0            2960 2024-08-17 20:42 share/doc/nerdctl/docs/notation.md
+-rw-r&ndash;r&ndash; 0/0            2596 2024-08-17 20:42 share/doc/nerdctl/docs/nydus.md
+-rw-r&ndash;r&ndash; 0/0            3277 2024-08-17 20:42 share/doc/nerdctl/docs/ocicrypt.md
+-rw-r&ndash;r&ndash; 0/0            1876 2024-08-17 20:42 share/doc/nerdctl/docs/overlaybd.md
+-rw-r&ndash;r&ndash; 0/0           15657 2024-08-17 20:42 share/doc/nerdctl/docs/registry.md
+-rw-r&ndash;r&ndash; 0/0            8707 2024-08-17 20:42 share/doc/nerdctl/docs/rootless.md
+-rw-r&ndash;r&ndash; 0/0            2015 2024-08-17 20:42 share/doc/nerdctl/docs/soci.md
+-rw-r&ndash;r&ndash; 0/0           10312 2024-08-17 20:42 share/doc/nerdctl/docs/stargz.md
+-rw-r&ndash;r&ndash; 0/0            3166 2024-08-17 20:42 share/doc/nerdctl/docs/testing.md
+drwxr-xr-x 0/0               0 2024-08-17 20:50 share/doc/nerdctl-full/
+-rw-r&ndash;r&ndash; 0/0            1163 2024-08-17 20:50 share/doc/nerdctl-full/README.md
+-rw-r&ndash;r&ndash; 0/0            8764 2024-08-17 20:50 share/doc/nerdctl-full/SHA256SUMS</p>
+
+<pre><code>&lt;/p&gt;
+&lt;/details&gt;
+
+&lt;details&gt;&lt;summary&gt;Included components&lt;/summary&gt;
+&lt;p&gt;
+
+See `share/doc/nerdctl-full/README.md`:
+```markdown
+# nerdctl (full distribution)
+- nerdctl: v2.0.0-rc.1
+- containerd: v2.0.0-rc.3
+- runc: v1.1.13
+- CNI plugins: v1.5.1
+- BuildKit: v0.15.2
+- Stargz Snapshotter: v0.15.1
+- imgcrypt: v1.1.11
+- RootlessKit: v2.3.1
+- slirp4netns: v1.3.1
+- bypass4netns: v0.4.1
+- fuse-overlayfs: v1.14
+- containerd-fuse-overlayfs: v1.0.8
+- Kubo (IPFS): v0.29.0
+- Tini: v0.19.0
+- buildg: v0.4.1
+
+## License
+- bin/slirp4netns:    [GNU GENERAL PUBLIC LICENSE, Version 2](https://github.com/rootless-containers/slirp4netns/blob/v1.3.1/COPYING)
+- bin/fuse-overlayfs: [GNU GENERAL PUBLIC LICENSE, Version 2](https://github.com/containers/fuse-overlayfs/blob/v1.14/COPYING)
+- bin/ipfs: [Combination of MIT-only license and dual MIT/Apache-2.0 license](https://github.com/ipfs/kubo/blob/v0.29.0/LICENSE)
+- bin/{runc,bypass4netns,bypass4netnsd}: Apache License 2.0, statically linked with libseccomp ([LGPL 2.1](https://github.com/seccomp/libseccomp/blob/main/LICENSE), source code available at https://github.com/seccomp/libseccomp/)
+- bin/tini: [MIT License](https://github.com/krallin/tini/blob/v0.19.0/LICENSE)
+- Other files: [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+</code></pre>
+
+<p></p>
+</details></p>
+</blockquote>
+
+<h2 id="quick-start">Quick start</h2>
+
+<h3 id="rootful">Rootful</h3>
+
+<pre><code class="language-console">$ sudo systemctl enable --now containerd
+$ sudo nerdctl run -d --name nginx -p 80:80 nginx:alpine
+</code></pre>
+
+<h3 id="rootless">Rootless</h3>
+
+<pre><code class="language-console">$ containerd-rootless-setuptool.sh install
+$ nerdctl run -d --name nginx -p 8080:80 nginx:alpine
+</code></pre>
+
+<p>Enabling cgroup v2 is highly recommended for rootless mode, see <a href="https://rootlesscontaine.rs/getting-started/common/cgroup2/" target="_blank">https://rootlesscontaine.rs/getting-started/common/cgroup2/</a> .</p>
+
+<hr>
+
+<p>The binaries were built automatically on GitHub Actions.
+The build log is available for 90 days: <a href="https://github.com/containerd/nerdctl/actions/runs/10435099350" target="_blank">https://github.com/containerd/nerdctl/actions/runs/10435099350</a></p>
+
+<p>The sha256sum of the SHA256SUMS file itself is <code>7086527171059921baf076ec0111881c6f411ff0b672623e7cb4bb69fd93226c</code> .</p>
+
+<hr>
+
+<p>Release manager: @AkihiroSuda</p>
+<br><h2>kubernetes-sigs/kind</h2> <h3>Release notes for v0.24.0</h3><h4>2024-08-15</h4><p>Highlights from this release include network policy support using <a href="https://github.com/kubernetes-sigs/kube-network-policies" target="_blank">sigs.k8s.io/kube-network-policies</a> (thanks @aojea!) and support for building node images from pre-compiled Kubernetes releases (thanks @dims!).</p>
+
+<p>For building images, see the docs at <a href="https://kind.sigs.k8s.io/docs/user/quick-start/#building-images" target="_blank">https://kind.sigs.k8s.io/docs/user/quick-start/#building-images</a></p>
+
+<h1 id="breaking-changes">Breaking Changes</h1>
+
+<ul>
+<li>The default node image is now Kubernetes v1.31.0: <code>kindest/node:v1.31.0@sha256:53df588e04085fd41ae12de0c3fe4c72f7013bba32a20e7325357a1ac94ba865</code></li>
+</ul>
+
+<h1 id="new-features">New Features</h1>
+
+<ul>
+<li><strong>Out-of-the-box support for network policy via <a href="https://github.com/kubernetes-sigs/kube-network-policies" target="_blank">sigs.k8s.io/kube-network-policies</a></strong>
+
+<ul>
+<li>Advanced users can still disable kindnetd and install your own CNI with <a href="https://kind.sigs.k8s.io/docs/user/configuration/#disable-default-cni" target="_blank">https://kind.sigs.k8s.io/docs/user/configuration/#disable-default-cni</a>, however note that this is a &ldquo;power user&rdquo; feature and KIND does not offer support for any third-party CNI</li>
+</ul></li>
+<li><strong>Support for building node images from existing Kubernetes releases</strong>
+
+<ul>
+<li><strong>NOTE</strong>: For Kubernetes releases before v1.31.0, this will result in larger images because kind opted in to compiling out remaining in-tree cloud providers with a build tag when publishing images. For v1.31.0+ there is no difference.</li>
+<li>See: <a href="https://kind.sigs.k8s.io/docs/user/quick-start/#building-images" target="_blank">https://kind.sigs.k8s.io/docs/user/quick-start/#building-images</a></li>
+</ul></li>
+<li>Support for loading multiple image archives in <code>kind load image-archive</code>
+
+<ul>
+<li><strong>NOTE</strong>: it is still more efficient to do a single archive in most cases</li>
+</ul></li>
+<li>Migrated to skipPhase in Init/JoinConfiguration instead of the kubeadm flags, making it possible for users to cutomize the phases (at your own risk!) with config patches</li>
+<li>powershell completion</li>
+<li>Updated dependencies, including, but not limited to:
+
+<ul>
+<li>containerd 1.7.18</li>
+<li>runc 1.1.13</li>
+<li>go 1.22.6</li>
+<li>CNI plugins to 1.5.1</li>
+<li>pause 3.10</li>
+</ul></li>
+<li>Docs and clarification for third party install options including scoop and winget</li>
+</ul>
+
+<p>Images pre-built for this release:</p>
+
+<ul>
+<li>v1.31.0: <code>kindest/node:v1.31.0@sha256:53df588e04085fd41ae12de0c3fe4c72f7013bba32a20e7325357a1ac94ba865</code></li>
+<li>v1.30.4: <code>kindest/node:v1.30.4@sha256:976ea815844d5fa93be213437e3ff5754cd599b040946b5cca43ca45c2047114</code></li>
+<li>v1.30.3: <code>kindest/node:v1.30.3@sha256:bf91e1ef2f7d92bb7734b2b896b3dddea98f0496b34d96e37dd5d7df331b7e56</code></li>
+<li>v1.29.8: <code>kindest/node:v1.29.8@sha256:d46b7aa29567e93b27f7531d258c372e829d7224b25e3fc6ffdefed12476d3aa</code></li>
+<li>v1.29.7: <code>kindest/node:v1.29.7@sha256:f70ab5d833fca132a100c1f95490be25d76188b053f49a3c0047ff8812360baf</code></li>
+<li>v1.28.13: <code>kindest/node:v1.28.13@sha256:45d319897776e11167e4698f6b14938eb4d52eb381d9e3d7a9086c16c69a8110</code></li>
+<li>v1.28.12: <code>kindest/node:v1.28.12@sha256:fa0e48b1e83bb8688a5724aa7eebffbd6337abd7909ad089a2700bf08c30c6ea</code></li>
+<li>v1.27.16: <code>kindest/node:v1.27.17@sha256:3fd82731af34efe19cd54ea5c25e882985bafa2c9baefe14f8deab1737d9fabe</code></li>
+<li>v1.26.15: <code>kindest/node:v1.26.15@sha256:1cc15d7b1edd2126ef051e359bf864f37bbcf1568e61be4d2ed1df7a3e87b354</code></li>
+<li>v1.25.16: <code>kindest/node:v1.25.16@sha256:6110314339b3b44d10da7d27881849a87e092124afab5956f2e10ecdb463b025</code></li>
+</ul>
+
+<p><strong>NOTE</strong>: You <em>must</em> use the <code>@sha256</code> digest to guarantee an image built for this release, until such a time as we switch to a different tagging scheme. Even then we will highly encourage digest pinning for security and reproducibility reasons.</p>
+
+<p>See also:</p>
+
+<ul>
+<li><a href="https://kind.sigs.k8s.io/docs/user/quick-start/#creating-a-cluster" target="_blank">https://kind.sigs.k8s.io/docs/user/quick-start/#creating-a-cluster</a></li>
+<li><a href="https://kind.sigs.k8s.io/docs/user/quick-start/#building-images" target="_blank">https://kind.sigs.k8s.io/docs/user/quick-start/#building-images</a></li>
+</ul>
+
+<p>NOTE: These node images support amd64 and arm64, both of our supported platforms. <strong>You must use the same platform as your host,</strong> for more context see <a href="https://github.com/kubernetes-sigs/kind/issues/2718" target="_blank">https://github.com/kubernetes-sigs/kind/issues/2718</a></p>
+
+<h1 id="fixes">Fixes</h1>
+
+<ul>
+<li>Fix kubeadm v1beta3 config template for kubeProxyMode: none</li>
+<li>Stop disabling LocalStorageIsolation for rootless clusters (which no longer appears to be necessary to avoid crashes)</li>
+</ul>
+
+<h1 id="contributors">Contributors</h1>
+
+<p><strong>Thank you to everyone who contributed to this release! ❤️</strong></p>
+
+<p>Users whose commits are in this release (alphabetically by user name)</p>
+
+<ul>
+<li>@abhay-krishna</li>
+<li>@aojea</li>
+<li>@BenTheElder</li>
+<li>@bzsuni</li>
+<li>@cpanato</li>
+<li>@dependabot[bot]</li>
+<li>@dominicqi</li>
+<li>@douglaswth</li>
+<li>@giuseppe</li>
+<li>@harshanarayana</li>
+<li>@joycecodes</li>
+<li>@k8s-ci-robot</li>
+<li>@kundan2707</li>
+<li>@netguino</li>
+<li>@nojnhuh</li>
+<li>@pohly</li>
+<li>@ste93cry</li>
+<li>@stmcginnis</li>
+</ul>
+
+<p>Thank you as well to everyone who contributed in other ways like filing issues, giving feedback, testing fixes, and helping users in slack!</p>
+<br><h2>kubernetes-sigs/kubebuilder</h2> <h3>Release notes for v4.2.0</h3><h4>2024-08-17</h4><p><strong>changes since <a href="https://github.com/kubernetes-sigs/kubebuilder/releases/v4.1.1" target="_blank">v4.1.1</a></strong></p>
+
+<h3 id="important-notice">⚠️ <strong>Important Notice:</strong></h3>
+
+<blockquote>
+<p><em>The artefacts for <a href="https://github.com/kubernetes-sigs/controller-runtime/tree/main/pkg/envtest" target="_blank">ENVTEST</a> from k8s <code>1.31</code> are exclusively available at: <a href="https://github.com/kubernetes-sigs/controller-tools/releases" target="_blank">Controller Tools Releases</a>. Kubebuilder no longer builds and promote the ENVTEST artefacts at the old location <a href="https://storage.googleapis.com/kubebuilder-tools" target="_blank">https://storage.googleapis.com/kubebuilder-tools</a> which is deprecated and can no longer be ensured by Kubebuilder maintainers. <strong>You should ensure that your projects are using the new location</strong>. For further information, see: <a href="https://github.com/kubernetes-sigs/kubebuilder/discussions/4082" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/discussions/4082</a></em></p>
+
+<p><strong>This update is fully transparent for Kubebuilder users assuming that they properly update their scaffolds to use setup-envtest from controller-runtime branch <code>release-0.19</code>.</strong></p>
+
+<pre><code class="language-shell"># To know the available versions check: 
+# - https://github.com/kubernetes-sigs/controller-tools/blob/main/envtest-releases.yaml
+ENVTEST_K8S_VERSION = 1.31.0
+# Controller-Runtime branch `release-0.19` has the implementation of the setup-envtest's code responsible
+# for downloading the tarball from the correct location.
+ENVTEST_VERSION ?= release-0.19
+
+...
+.PHONY: envtest
+envtest: $(ENVTEST) ## Download setup-envtest locally if necessary.
+$(ENVTEST): $(LOCALBIN)
+	$(call go-install-tool,$(ENVTEST),sigs.k8s.io/controller-runtime/tools/setup-envtest,$(ENVTEST_VERSION))
+</code></pre>
+</blockquote>
+
+<h3 id="new-features">✨ New Features</h3>
+
+<ul>
+<li><strong>(go/v4, kustomize/v2)</strong>: Add support to protect project with <a href="https://kubernetes.io/docs/concepts/services-networking/network-policies/" target="_blank">network policies</a> (#3853)</li>
+<li><strong>(go/v4)</strong>: Add support to k8s 1.31 (#4080)</li>
+<li><strong>(go/v4)</strong>: Upgrading controller-runtime from v0.18.4 to v0.19.0 (#4080)</li>
+<li><strong>(go/v4)</strong>: Upgrading controller-tools from v0.15.0 to v0.16.1 (#4080)</li>
+<li><strong>(go/v4, kustomize/v2)</strong>: Upgrade kustomize from v5.4.2 to v5.4.3 (#4084)</li>
+</ul>
+
+<h3 id="bug-fixes">🐛 Bug Fixes</h3>
+
+<ul>
+<li><strong>(go/v4)</strong>: Add missing cancel context to controller&rsquo;s suite-test (#4067)</li>
+<li>⚠️ <strong>(Only relevant for users of Kubebuilder as a library)</strong>: ImplementWebhooks should only be used by the e2e tests and should be under its package. Therefore, this method is no longer served under <code>pkg/plugin/util</code> (#4065)</li>
+</ul>
+
+<h2 id="what-s-changed-full-changelog">What&rsquo;s Changed (Full Changelog)</h2>
+
+<ul>
+<li>✨  Add Network Policy by @camilamacedo86 in <a href="https://github.com/kubernetes-sigs/kubebuilder/pull/3853" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/pull/3853</a></li>
+<li>📖  Fix generation of markers based on controller-tools  by @marlapativ in <a href="https://github.com/kubernetes-sigs/kubebuilder/pull/4045" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/pull/4045</a></li>
+<li>📖 Add crd-scope and operator-scope documentation by @camilamacedo86 in <a href="https://github.com/kubernetes-sigs/kubebuilder/pull/4035" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/pull/4035</a></li>
+<li>:seedling: Bump github.com/onsi/ginkgo/v2 from 2.19.0 to 2.19.1 by @dependabot in <a href="https://github.com/kubernetes-sigs/kubebuilder/pull/4052" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/pull/4052</a></li>
+<li>:seedling: Bump github.com/onsi/gomega from 1.33.1 to 1.34.1 by @dependabot in <a href="https://github.com/kubernetes-sigs/kubebuilder/pull/4053" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/pull/4053</a></li>
+<li>:book: Fix typo in designs template by @gabriele-wolfox in <a href="https://github.com/kubernetes-sigs/kubebuilder/pull/4056" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/pull/4056</a></li>
+<li>⚠️  (cleanup/fix): ImplementWebhooks method should only be used by the e2e tests and should be under its package by @camilamacedo86 in <a href="https://github.com/kubernetes-sigs/kubebuilder/pull/4065" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/pull/4065</a></li>
+<li>🌱 (cleanup): cleanup tests for plugin/util functions by @camilamacedo86 in <a href="https://github.com/kubernetes-sigs/kubebuilder/pull/4066" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/pull/4066</a></li>
+<li>🌱 pkg/plugin/utils: add tests to cover funcs by @camilamacedo86 in <a href="https://github.com/kubernetes-sigs/kubebuilder/pull/4068" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/pull/4068</a></li>
+<li>🐛 (go/v4): add missing cancel context to controller&rsquo;s suite-test by @camilamacedo86 in <a href="https://github.com/kubernetes-sigs/kubebuilder/pull/4067" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/pull/4067</a></li>
+<li>📖 Upgrade the muilt-version sample to the latest by @camilamacedo86 in <a href="https://github.com/kubernetes-sigs/kubebuilder/pull/4069" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/pull/4069</a></li>
+<li>:seedling: Bump github.com/onsi/ginkgo/v2 from 2.19.1 to 2.20.0 by @dependabot in <a href="https://github.com/kubernetes-sigs/kubebuilder/pull/4071" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/pull/4071</a></li>
+<li>📖  docs:samples:cronjob: change makefile to generate the CRD without description to allow apply CRDs by @camilamacedo86 in <a href="https://github.com/kubernetes-sigs/kubebuilder/pull/4075" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/pull/4075</a></li>
+<li>🌱 Cleanup hack generate docs by removing code duplication by @camilamacedo86 in <a href="https://github.com/kubernetes-sigs/kubebuilder/pull/4076" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/pull/4076</a></li>
+<li>✨ Add support to k8s 1.31 and upgrade dependencies by @camilamacedo86 in <a href="https://github.com/kubernetes-sigs/kubebuilder/pull/4080" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/pull/4080</a></li>
+<li>📖 : Upgrade controller-gen used to generate the docs from 0.15.0 to 0.16.1 by @camilamacedo86 in <a href="https://github.com/kubernetes-sigs/kubebuilder/pull/4081" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/pull/4081</a></li>
+<li>📖 (cleanup and enhance) improve and make clear info about setup envtest and its binaries and that old location is deprecated by @camilamacedo86 in <a href="https://github.com/kubernetes-sigs/kubebuilder/pull/4083" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/pull/4083</a></li>
+<li>✨ upgrade kustomize from v5.4.2 to v5.4.3 by @camilamacedo86 in <a href="https://github.com/kubernetes-sigs/kubebuilder/pull/4084" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/pull/4084</a></li>
+</ul>
+
+<h2 id="new-contributors">New Contributors</h2>
+
+<ul>
+<li>@marlapativ made their first contribution in <a href="https://github.com/kubernetes-sigs/kubebuilder/pull/4045" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/pull/4045</a></li>
+<li>@gabriele-wolfox made their first contribution in <a href="https://github.com/kubernetes-sigs/kubebuilder/pull/4056" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/pull/4056</a></li>
+</ul>
+
+<p><strong>Full Changelog</strong>: <a href="https://github.com/kubernetes-sigs/kubebuilder/compare/v4.1.1...v4.2.0" target="_blank">https://github.com/kubernetes-sigs/kubebuilder/compare/v4.1.1&hellip;v4.2.0</a></p>
+<br>
+</body>
+
+</html>
