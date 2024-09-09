@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Whats new in the last week</title>
+</head>
+
+<body>
+<h1>Latest Releases for the week 2024-09-02 - 2024-09-09</h1><h2>cri-o/cri-o</h2> <h3>Release notes for v1.30.5</h3><h4>2024-09-03</h4><ul>
+<li><a href="#cri-o-v1305">CRI-O v1.30.5</a>
+
+<ul>
+<li><a href="#downloads">Downloads</a></li>
+<li><a href="#changelog-since-v1304">Changelog since v1.30.4</a>
+
+<ul>
+<li><a href="#changes-by-kind">Changes by Kind</a>
+
+<ul>
+<li><a href="#feature">Feature</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#dependencies">Dependencies</a>
+
+<ul>
+<li><a href="#added">Added</a></li>
+<li><a href="#changed">Changed</a></li>
+<li><a href="#removed">Removed</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h1 id="cri-o-v1-30-5">CRI-O v1.30.5</h1>
+
+<p>The release notes have been generated for the commit range
+<a href="https://github.com/cri-o/cri-o/compare/v1.30.4...v1.30.5" target="_blank">v1.30.4&hellip;v1.30.5</a> on Tue, 03 Sep 2024 00:19:38 UTC.</p>
+
+<h2 id="downloads">Downloads</h2>
+
+<p>Download one of our static release bundles via our Google Cloud Bucket:</p>
+
+<ul>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.30.5.tar.gz" target="_blank">cri-o.amd64.v1.30.5.tar.gz</a>
+
+<ul>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.30.5.tar.gz.sha256sum" target="_blank">cri-o.amd64.v1.30.5.tar.gz.sha256sum</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.30.5.tar.gz.sig" target="_blank">cri-o.amd64.v1.30.5.tar.gz.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.30.5.tar.gz.cert" target="_blank">cri-o.amd64.v1.30.5.tar.gz.cert</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.30.5.tar.gz.spdx" target="_blank">cri-o.amd64.v1.30.5.tar.gz.spdx</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.30.5.tar.gz.spdx.sig" target="_blank">cri-o.amd64.v1.30.5.tar.gz.spdx.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.30.5.tar.gz.spdx.cert" target="_blank">cri-o.amd64.v1.30.5.tar.gz.spdx.cert</a></li>
+</ul></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.30.5.tar.gz" target="_blank">cri-o.arm64.v1.30.5.tar.gz</a>
+
+<ul>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.30.5.tar.gz.sha256sum" target="_blank">cri-o.arm64.v1.30.5.tar.gz.sha256sum</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.30.5.tar.gz.sig" target="_blank">cri-o.arm64.v1.30.5.tar.gz.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.30.5.tar.gz.cert" target="_blank">cri-o.arm64.v1.30.5.tar.gz.cert</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.30.5.tar.gz.spdx" target="_blank">cri-o.arm64.v1.30.5.tar.gz.spdx</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.30.5.tar.gz.spdx.sig" target="_blank">cri-o.arm64.v1.30.5.tar.gz.spdx.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.30.5.tar.gz.spdx.cert" target="_blank">cri-o.arm64.v1.30.5.tar.gz.spdx.cert</a></li>
+</ul></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.30.5.tar.gz" target="_blank">cri-o.ppc64le.v1.30.5.tar.gz</a>
+
+<ul>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.30.5.tar.gz.sha256sum" target="_blank">cri-o.ppc64le.v1.30.5.tar.gz.sha256sum</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.30.5.tar.gz.sig" target="_blank">cri-o.ppc64le.v1.30.5.tar.gz.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.30.5.tar.gz.cert" target="_blank">cri-o.ppc64le.v1.30.5.tar.gz.cert</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.30.5.tar.gz.spdx" target="_blank">cri-o.ppc64le.v1.30.5.tar.gz.spdx</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.30.5.tar.gz.spdx.sig" target="_blank">cri-o.ppc64le.v1.30.5.tar.gz.spdx.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.30.5.tar.gz.spdx.cert" target="_blank">cri-o.ppc64le.v1.30.5.tar.gz.spdx.cert</a></li>
+</ul></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.30.5.tar.gz" target="_blank">cri-o.s390x.v1.30.5.tar.gz</a>
+
+<ul>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.30.5.tar.gz.sha256sum" target="_blank">cri-o.s390x.v1.30.5.tar.gz.sha256sum</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.30.5.tar.gz.sig" target="_blank">cri-o.s390x.v1.30.5.tar.gz.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.30.5.tar.gz.cert" target="_blank">cri-o.s390x.v1.30.5.tar.gz.cert</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.30.5.tar.gz.spdx" target="_blank">cri-o.s390x.v1.30.5.tar.gz.spdx</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.30.5.tar.gz.spdx.sig" target="_blank">cri-o.s390x.v1.30.5.tar.gz.spdx.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.30.5.tar.gz.spdx.cert" target="_blank">cri-o.s390x.v1.30.5.tar.gz.spdx.cert</a></li>
+</ul></li>
+</ul>
+
+<p>To verify the artifact signatures via <a href="https://github.com/sigstore/cosign" target="_blank">cosign</a>, run:</p>
+
+<pre><code class="language-console">&gt; export COSIGN_EXPERIMENTAL=1
+&gt; cosign verify-blob cri-o.amd64.v1.30.5.tar.gz \
+    --certificate-identity https://github.com/cri-o/cri-o/.github/workflows/test.yml@refs/tags/v1.30.5 \
+    --certificate-oidc-issuer https://token.actions.githubusercontent.com \
+    --certificate-github-workflow-repository cri-o/cri-o \
+    --certificate-github-workflow-ref refs/tags/v1.30.5 \
+    --signature cri-o.amd64.v1.30.5.tar.gz.sig \
+    --certificate cri-o.amd64.v1.30.5.tar.gz.cert
+</code></pre>
+
+<p>To verify the bill of materials (SBOM) in <a href="https://spdx.org" target="_blank">SPDX</a> format using the <a href="https://sigs.k8s.io/bom" target="_blank">bom</a> tool, run:</p>
+
+<pre><code class="language-console">&gt; tar xfz cri-o.amd64.v1.30.5.tar.gz
+&gt; bom validate -e cri-o.amd64.v1.30.5.tar.gz.spdx -d cri-o
+</code></pre>
+
+<h2 id="changelog-since-v1-30-4">Changelog since v1.30.4</h2>
+
+<h3 id="changes-by-kind">Changes by Kind</h3>
+
+<h4 id="feature">Feature</h4>
+
+<ul>
+<li>Update the type of checks the internal repair feature performs on CRI-O&rsquo;s start-up following an unclean shutdown, and add a new <code>crio check</code> sub-command. (#8468, @kwilczynski)</li>
+</ul>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<h3 id="added">Added</h3>
+
+<p><em>Nothing has changed.</em></p>
+
+<h3 id="changed">Changed</h3>
+
+<p><em>Nothing has changed.</em></p>
+
+<h3 id="removed">Removed</h3>
+
+<p><em>Nothing has changed.</em></p>
+<br><h3>Release notes for v1.29.8</h3><h4>2024-09-03</h4><ul>
+<li><a href="#cri-o-v1298">CRI-O v1.29.8</a>
+
+<ul>
+<li><a href="#downloads">Downloads</a></li>
+<li><a href="#changelog-since-v1297">Changelog since v1.29.7</a></li>
+<li><a href="#dependencies">Dependencies</a>
+
+<ul>
+<li><a href="#added">Added</a></li>
+<li><a href="#changed">Changed</a></li>
+<li><a href="#removed">Removed</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h1 id="cri-o-v1-29-8">CRI-O v1.29.8</h1>
+
+<p>The release notes have been generated for the commit range
+<a href="https://github.com/cri-o/cri-o/compare/v1.29.7...v1.29.8" target="_blank">v1.29.7&hellip;v1.29.8</a> on Tue, 03 Sep 2024 00:19:39 UTC.</p>
+
+<h2 id="downloads">Downloads</h2>
+
+<p>Download one of our static release bundles via our Google Cloud Bucket:</p>
+
+<ul>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.29.8.tar.gz" target="_blank">cri-o.amd64.v1.29.8.tar.gz</a>
+
+<ul>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.29.8.tar.gz.sha256sum" target="_blank">cri-o.amd64.v1.29.8.tar.gz.sha256sum</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.29.8.tar.gz.sig" target="_blank">cri-o.amd64.v1.29.8.tar.gz.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.29.8.tar.gz.cert" target="_blank">cri-o.amd64.v1.29.8.tar.gz.cert</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.29.8.tar.gz.spdx" target="_blank">cri-o.amd64.v1.29.8.tar.gz.spdx</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.29.8.tar.gz.spdx.sig" target="_blank">cri-o.amd64.v1.29.8.tar.gz.spdx.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.29.8.tar.gz.spdx.cert" target="_blank">cri-o.amd64.v1.29.8.tar.gz.spdx.cert</a></li>
+</ul></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.29.8.tar.gz" target="_blank">cri-o.arm64.v1.29.8.tar.gz</a>
+
+<ul>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.29.8.tar.gz.sha256sum" target="_blank">cri-o.arm64.v1.29.8.tar.gz.sha256sum</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.29.8.tar.gz.sig" target="_blank">cri-o.arm64.v1.29.8.tar.gz.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.29.8.tar.gz.cert" target="_blank">cri-o.arm64.v1.29.8.tar.gz.cert</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.29.8.tar.gz.spdx" target="_blank">cri-o.arm64.v1.29.8.tar.gz.spdx</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.29.8.tar.gz.spdx.sig" target="_blank">cri-o.arm64.v1.29.8.tar.gz.spdx.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.29.8.tar.gz.spdx.cert" target="_blank">cri-o.arm64.v1.29.8.tar.gz.spdx.cert</a></li>
+</ul></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.29.8.tar.gz" target="_blank">cri-o.ppc64le.v1.29.8.tar.gz</a>
+
+<ul>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.29.8.tar.gz.sha256sum" target="_blank">cri-o.ppc64le.v1.29.8.tar.gz.sha256sum</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.29.8.tar.gz.sig" target="_blank">cri-o.ppc64le.v1.29.8.tar.gz.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.29.8.tar.gz.cert" target="_blank">cri-o.ppc64le.v1.29.8.tar.gz.cert</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.29.8.tar.gz.spdx" target="_blank">cri-o.ppc64le.v1.29.8.tar.gz.spdx</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.29.8.tar.gz.spdx.sig" target="_blank">cri-o.ppc64le.v1.29.8.tar.gz.spdx.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.29.8.tar.gz.spdx.cert" target="_blank">cri-o.ppc64le.v1.29.8.tar.gz.spdx.cert</a></li>
+</ul></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.29.8.tar.gz" target="_blank">cri-o.s390x.v1.29.8.tar.gz</a>
+
+<ul>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.29.8.tar.gz.sha256sum" target="_blank">cri-o.s390x.v1.29.8.tar.gz.sha256sum</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.29.8.tar.gz.sig" target="_blank">cri-o.s390x.v1.29.8.tar.gz.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.29.8.tar.gz.cert" target="_blank">cri-o.s390x.v1.29.8.tar.gz.cert</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.29.8.tar.gz.spdx" target="_blank">cri-o.s390x.v1.29.8.tar.gz.spdx</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.29.8.tar.gz.spdx.sig" target="_blank">cri-o.s390x.v1.29.8.tar.gz.spdx.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.29.8.tar.gz.spdx.cert" target="_blank">cri-o.s390x.v1.29.8.tar.gz.spdx.cert</a></li>
+</ul></li>
+</ul>
+
+<p>To verify the artifact signatures via <a href="https://github.com/sigstore/cosign" target="_blank">cosign</a>, run:</p>
+
+<pre><code class="language-console">&gt; export COSIGN_EXPERIMENTAL=1
+&gt; cosign verify-blob cri-o.amd64.v1.29.8.tar.gz \
+    --certificate-identity https://github.com/cri-o/cri-o/.github/workflows/test.yml@refs/tags/v1.29.8 \
+    --certificate-oidc-issuer https://token.actions.githubusercontent.com \
+    --certificate-github-workflow-repository cri-o/cri-o \
+    --certificate-github-workflow-ref refs/tags/v1.29.8 \
+    --signature cri-o.amd64.v1.29.8.tar.gz.sig \
+    --certificate cri-o.amd64.v1.29.8.tar.gz.cert
+</code></pre>
+
+<p>To verify the bill of materials (SBOM) in <a href="https://spdx.org" target="_blank">SPDX</a> format using the <a href="https://sigs.k8s.io/bom" target="_blank">bom</a> tool, run:</p>
+
+<pre><code class="language-console">&gt; tar xfz cri-o.amd64.v1.29.8.tar.gz
+&gt; bom validate -e cri-o.amd64.v1.29.8.tar.gz.spdx -d cri-o
+</code></pre>
+
+<h2 id="changelog-since-v1-29-7">Changelog since v1.29.7</h2>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<h3 id="added">Added</h3>
+
+<p><em>Nothing has changed.</em></p>
+
+<h3 id="changed">Changed</h3>
+
+<p><em>Nothing has changed.</em></p>
+
+<h3 id="removed">Removed</h3>
+
+<p><em>Nothing has changed.</em></p>
+<br><h3>Release notes for v1.28.10</h3><h4>2024-09-03</h4><ul>
+<li><a href="#cri-o-v12810">CRI-O v1.28.10</a>
+
+<ul>
+<li><a href="#downloads">Downloads</a></li>
+<li><a href="#changelog-since-v1289">Changelog since v1.28.9</a></li>
+<li><a href="#dependencies">Dependencies</a>
+
+<ul>
+<li><a href="#added">Added</a></li>
+<li><a href="#changed">Changed</a></li>
+<li><a href="#removed">Removed</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h1 id="cri-o-v1-28-10">CRI-O v1.28.10</h1>
+
+<p>The release notes have been generated for the commit range
+<a href="https://github.com/cri-o/cri-o/compare/v1.28.9...v1.28.10" target="_blank">v1.28.9&hellip;v1.28.10</a> on Tue, 03 Sep 2024 00:19:54 UTC.</p>
+
+<h2 id="downloads">Downloads</h2>
+
+<p>Download one of our static release bundles via our Google Cloud Bucket:</p>
+
+<ul>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.28.10.tar.gz" target="_blank">cri-o.amd64.v1.28.10.tar.gz</a>
+
+<ul>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.28.10.tar.gz.sha256sum" target="_blank">cri-o.amd64.v1.28.10.tar.gz.sha256sum</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.28.10.tar.gz.sig" target="_blank">cri-o.amd64.v1.28.10.tar.gz.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.28.10.tar.gz.cert" target="_blank">cri-o.amd64.v1.28.10.tar.gz.cert</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.28.10.tar.gz.spdx" target="_blank">cri-o.amd64.v1.28.10.tar.gz.spdx</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.28.10.tar.gz.spdx.sig" target="_blank">cri-o.amd64.v1.28.10.tar.gz.spdx.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.28.10.tar.gz.spdx.cert" target="_blank">cri-o.amd64.v1.28.10.tar.gz.spdx.cert</a></li>
+</ul></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.28.10.tar.gz" target="_blank">cri-o.arm64.v1.28.10.tar.gz</a>
+
+<ul>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.28.10.tar.gz.sha256sum" target="_blank">cri-o.arm64.v1.28.10.tar.gz.sha256sum</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.28.10.tar.gz.sig" target="_blank">cri-o.arm64.v1.28.10.tar.gz.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.28.10.tar.gz.cert" target="_blank">cri-o.arm64.v1.28.10.tar.gz.cert</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.28.10.tar.gz.spdx" target="_blank">cri-o.arm64.v1.28.10.tar.gz.spdx</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.28.10.tar.gz.spdx.sig" target="_blank">cri-o.arm64.v1.28.10.tar.gz.spdx.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.28.10.tar.gz.spdx.cert" target="_blank">cri-o.arm64.v1.28.10.tar.gz.spdx.cert</a></li>
+</ul></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.28.10.tar.gz" target="_blank">cri-o.ppc64le.v1.28.10.tar.gz</a>
+
+<ul>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.28.10.tar.gz.sha256sum" target="_blank">cri-o.ppc64le.v1.28.10.tar.gz.sha256sum</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.28.10.tar.gz.sig" target="_blank">cri-o.ppc64le.v1.28.10.tar.gz.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.28.10.tar.gz.cert" target="_blank">cri-o.ppc64le.v1.28.10.tar.gz.cert</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.28.10.tar.gz.spdx" target="_blank">cri-o.ppc64le.v1.28.10.tar.gz.spdx</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.28.10.tar.gz.spdx.sig" target="_blank">cri-o.ppc64le.v1.28.10.tar.gz.spdx.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.28.10.tar.gz.spdx.cert" target="_blank">cri-o.ppc64le.v1.28.10.tar.gz.spdx.cert</a></li>
+</ul></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.28.10.tar.gz" target="_blank">cri-o.s390x.v1.28.10.tar.gz</a>
+
+<ul>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.28.10.tar.gz.sha256sum" target="_blank">cri-o.s390x.v1.28.10.tar.gz.sha256sum</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.28.10.tar.gz.sig" target="_blank">cri-o.s390x.v1.28.10.tar.gz.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.28.10.tar.gz.cert" target="_blank">cri-o.s390x.v1.28.10.tar.gz.cert</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.28.10.tar.gz.spdx" target="_blank">cri-o.s390x.v1.28.10.tar.gz.spdx</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.28.10.tar.gz.spdx.sig" target="_blank">cri-o.s390x.v1.28.10.tar.gz.spdx.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.28.10.tar.gz.spdx.cert" target="_blank">cri-o.s390x.v1.28.10.tar.gz.spdx.cert</a></li>
+</ul></li>
+</ul>
+
+<p>To verify the artifact signatures via <a href="https://github.com/sigstore/cosign" target="_blank">cosign</a>, run:</p>
+
+<pre><code class="language-console">&gt; export COSIGN_EXPERIMENTAL=1
+&gt; cosign verify-blob cri-o.amd64.v1.28.10.tar.gz \
+    --certificate-identity https://github.com/cri-o/cri-o/.github/workflows/test.yml@refs/tags/v1.28.10 \
+    --certificate-oidc-issuer https://token.actions.githubusercontent.com \
+    --certificate-github-workflow-repository cri-o/cri-o \
+    --certificate-github-workflow-ref refs/tags/v1.28.10 \
+    --signature cri-o.amd64.v1.28.10.tar.gz.sig \
+    --certificate cri-o.amd64.v1.28.10.tar.gz.cert
+</code></pre>
+
+<p>To verify the bill of materials (SBOM) in <a href="https://spdx.org" target="_blank">SPDX</a> format using the <a href="https://sigs.k8s.io/bom" target="_blank">bom</a> tool, run:</p>
+
+<pre><code class="language-console">&gt; tar xfz cri-o.amd64.v1.28.10.tar.gz
+&gt; bom validate -e cri-o.amd64.v1.28.10.tar.gz.spdx -d cri-o
+</code></pre>
+
+<h2 id="changelog-since-v1-28-9">Changelog since v1.28.9</h2>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<h3 id="added">Added</h3>
+
+<p><em>Nothing has changed.</em></p>
+
+<h3 id="changed">Changed</h3>
+
+<p><em>Nothing has changed.</em></p>
+
+<h3 id="removed">Removed</h3>
+
+<p><em>Nothing has changed.</em></p>
+<br><h2>kubernetes/cloud-provider-openstack</h2> <h3>Release notes for openstack-manila-csi-2.31.0</h3><h4>2024-09-06</h4><p>Manila CSI Chart for OpenStack</p>
+<br><h3>Release notes for openstack-cloud-controller-manager-2.31.0</h3><h4>2024-09-06</h4><p>Openstack Cloud Controller Manager Helm Chart</p>
+<br><h3>Release notes for openstack-cinder-csi-2.31.0</h3><h4>2024-09-06</h4><p>Cinder CSI Chart for OpenStack</p>
+<br><h3>Release notes for Release v1.31.0</h3><h4>2024-09-06</h4><h2 id="what-s-changed">What&rsquo;s Changed</h2>
+
+<ul>
+<li>[occm] add dnsPolicy feature  by @xinity in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2594" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2594</a></li>
+<li>[manila-csi-plugin] Update manila dev doc regarding implemented features by @gouthampacha in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2591" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2591</a></li>
+<li>[occm] add a node selector support for loadbalancer services by @kayrus in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2601" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2601</a></li>
+<li>[cinder-csi-plugin] Add extraEnv support on cinder-csi-plugin and manila-csi-plugin helm charts by @pli01 in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2613" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2613</a></li>
+<li>[cinder-csi-plugin] retry mount operation with rescan incase of failure by @NymanRobin in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2610" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2610</a></li>
+<li>[all] Upgrade Gophercloud to v2 by @pierreprinetti in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2615" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2615</a></li>
+<li>[occm] Revert dnsPolicy to Default for occm by @zetaab in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2621" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2621</a></li>
+<li>[cinder-csi-plugin] Multi region/clouds support for controllerServer by @MatthieuFin in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2551" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2551</a></li>
+<li>[cinder-csi-plugin] ephemeral volume removal by @sergelogvinov in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2602" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2602</a></li>
+<li>[occm] fix e2e tests by @zetaab in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2636" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2636</a></li>
+<li>[all] update deps to 1.31 by @zetaab in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2637" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2637</a></li>
+<li>[occm] LoadBalancer ProxyProtocol v2 feature by @Lucasgranet in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2635" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2635</a></li>
+<li>[occm] [cinder-csi-plugin] Sanitize AZ name by @scrungus in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2634" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2634</a></li>
+<li>[occm] Fix: Set instanceID to get subnet for loadbalancer. by @ovstuckrad in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2639" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2639</a></li>
+<li>[charts] support additionalLabels for occm serviceMonitor and cinder-csi-plugin podMonitor by @roehlc in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2632" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2632</a></li>
+</ul>
+
+<h2 id="new-contributors">New Contributors</h2>
+
+<ul>
+<li>@xinity made their first contribution in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2594" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2594</a></li>
+<li>@pli01 made their first contribution in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2613" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2613</a></li>
+<li>@NymanRobin made their first contribution in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2610" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2610</a></li>
+<li>@MatthieuFin made their first contribution in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2551" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2551</a></li>
+<li>@Lucasgranet made their first contribution in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2635" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2635</a></li>
+<li>@scrungus made their first contribution in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2634" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2634</a></li>
+<li>@ovstuckrad made their first contribution in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2639" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2639</a></li>
+<li>@roehlc made their first contribution in <a href="https://github.com/kubernetes/cloud-provider-openstack/pull/2632" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/pull/2632</a></li>
+</ul>
+
+<p><strong>Full Changelog</strong>: <a href="https://github.com/kubernetes/cloud-provider-openstack/compare/v1.30.0...v1.31.0" target="_blank">https://github.com/kubernetes/cloud-provider-openstack/compare/v1.30.0&hellip;v1.31.0</a></p>
+<br><h2>kubernetes-sigs/kubespray</h2> <h3>Release notes for v2.26.0</h3><h4>2024-09-06</h4><h3 id="deprecation-removal">Deprecation / Removal</h3>
+
+<ul>
+<li>Deprecating support for Centos7; they are not tested anymore (#11344, @ant31)</li>
+<li>Remove Debian 10 support. (#11347, @tico88612)</li>
+<li>Remove the <code>kubeadm_version</code> which is always equal to <code>kube_version</code> (#11473, @VannTen)</li>
+<li>Drop support for Kubernetes 1.27.x minimum version now is 1.28.x (#11221, @mzaian)</li>
+</ul>
+
+<h3 id="feature-major-changes">Feature / Major Changes</h3>
+
+<ul>
+<li>Make kubernetes v1.30.4 default (#11455, @kokyhm)</li>
+<li>Add hashes for Kubernetes v1.30.3 default (#11391, @tico88612), Add hashes for Kubernetes v1.30.2 default (#11343, @tmurakam), Add hashes for Kubernetes 1.30.0, 1.30.1 and 1.30.2 (#11261, @tmurakam), Add hashes for kubernetes 1.29.7, 1.28.<a href="#11407, @mzaian">11-12</a></li>
+<li>Add option <code>ubuntu_kernel_unattended_upgrades_disabled</code> to control unattended-upgrades for Linux kernel and all packages start with linux- on Ubuntu (#11296, @tu1h)</li>
+<li>Added option to configure dependencies for kubelet.service (#11297, @ledroide)</li>
+<li>Adds the possibility to add extra arguments to the various containers in the cinder-csi plugin.(#11169, @Payback159)</li>
+<li>Allow to run kubespray with an empty kube_node group, to provision only the control plane (#11248, @VannTen)</li>
+<li>CentOS 7 yum repo baseurl update (#11360, @tico88612)</li>
+<li>Check CentOS-Base.repo exists for CentOS 7 (#11402, @tu1h)</li>
+<li>Check if peers is defined when peering with routers (#11259, @ehsan310)</li>
+<li>OpenStack Cloud Controller Manager upgrade to 1.30.0 (#11358, @tico88612)</li>
+<li>Rename <code>systemd</code> module to <code>systemd_service</code> (#11396, @tu1h)</li>
+<li>User has the ability to configure calico-kube-controllers log level (#11335, @mirwan)</li>
+<li>User has the ability to configure local_volume_provisioner  log level (#11336, @mirwan)</li>
+<li>User has the ability to configure netchecker components log levels (#11334, @mirwan)</li>
+<li>You can now disable installing OS dependencies using system&rsquo;s package manager by skipping <code>system-packages</code> tag. (#10872, @hedayat)</li>
+<li><code>kubelet_max_parallel_image_pulls</code> represents the maximum number of image pulls in parallel (#11094, @tu1h)</li>
+<li>Update reset task to support Tencent OS (<code>reset_restart_network_service_name</code>) (#11459, @KubeKyrie)</li>
+<li>Add conditional checking on ubuntu kernel unattended_upgrades disabling (#11479, @tu1h)</li>
+</ul>
+
+<h3 id="applications">Applications</h3>
+
+<ul>
+<li>Bump Cinder CSI Plugin to v1.30.0 (#11374, @tico88612)</li>
+<li>Bump upcloud csi driver to v1.1.0 in order to enable csi volume snapshots. (#11303, @Elias-elastisys)</li>
+<li>User has a possibility to fix nodePort of ingress-nginx service with property in addons.yaml (#11310, @mochizuki875)</li>
+<li>Update kube-vip to v0.8.0 (#11156, @jisnardo)</li>
+<li>[cert-manager] upgrade to v1.14.7 (#11341, @tico88612)</li>
+<li>[cert-manager] add support v1.13.6 (#11279, @tico88612)</li>
+<li>[ingress-nginx] upgrade controller to version 1.11.2 (#11463, @mzaian)</li>
+<li>[helm] Upgrade to v3.15.4, add 3.15.x, and drop 3.13.x (#11486, @yankay)</li>
+<li>Add support for LB in UpCloud private zone (#11260, @davidumea)</li>
+<li>Bump UpCloud terraform module to v5.6.0
+UpCloud servers specify server groups to be apart of, eliminates manual rescheduling. (#11311, @robinAwallace)</li>
+<li>Update node-feature-discovery to v0.16.4 (#11250, @mzaian)</li>
+<li>Allow for configuring etcd progress notify interval and default set to 5s (#11499, @liuxu623)</li>
+<li>Support Gateway API CRDs install (#11376, @tico88612)</li>
+<li>Increase ansible timeout to 300 (#11354, @rptaylor)</li>
+</ul>
+
+<h3 id="network">Network</h3>
+
+<ul>
+<li>[calico] Change calico default version to v3.28.1, add v3.28.0 and checksum , Update calico apiserver deployment to use new readiness probe (#11234, @ehsan310)</li>
+<li>[calico] add calico support v3.27.4 to fix high cpu load due to XDP program in iptables (#11476, @ehsan310)</li>
+<li>Add cilium_hubble_event_buffer_capacity &amp; cilium_hubble_event_queue_size vars (#10943, @pedro-peter)</li>
+<li>[network] bump cni version to v1.4.0 (#10698, @cyclinder)</li>
+<li>Change weave CNI to community version and upgrade to the latest version (2.8.7) (#11228, @tico88612)</li>
+<li>[kube-ovn] update to v1.12.21 (#11445, @oilbeater)</li>
+</ul>
+
+<h3 id="container-managers">Container-Managers</h3>
+
+<ul>
+<li><p>[containerd] Make containerd 1.7.21 default (#11478, @yankay)</p></li>
+
+<li><p>[containerd] added debug config variables  (#11080, @spnngl)</p></li>
+
+<li><p>[containerd] fixes wrong templating for tracing config (#11372, @ugur99)
+[runc] Upgrade to v1.1.13 (#11413, @mzaian)</p></li>
+
+<li><p>Update docker cli version 26.1.2 (#11291, @ErikJiang)</p></li>
+
+<li>
+<h3 id="documentation">Documentation</h3></li>
+
+<li><p>Update RELEASE.md for upgrading k8s (#11321, @yankay)</p></li>
+</ul>
+
+<h3 id="bug-or-regression">Bug or Regression</h3>
+
+<ul>
+<li>Delete <code>/etc/NetworkManager/conf.d/dns.conf</code> on reset. (#11440, @HoKim98)</li>
+<li>Fix Hetzner kubernetes group names (#11232, @jmaccabee13)</li>
+<li>Fix: skip multus when not defined (#10934, @darkobas2)</li>
+<li>Ingress-nginx-controller admission service is automatically created when <code>ingress_nginx_webhook_enabled: true</code> (#11309, @mochizuki875)</li>
+<li>Provide missing advertise-address flag to kube-apiserver (#11387, @derselbst)</li>
+<li>Update reset task to support Kylin OS (<code>reset_restart_network_service_name</code>) (#11406, @KubeKyrie)</li>
+<li>Updated indentation in cni-kube-ovn.yml.j2 (L658) (#11357, @sanshah1211)</li>
+<li>Fix CI with fail docker pull in gitlab runner by change DOCKER_HOST (#11315, @yankay)</li>
+<li>Fix etcd not starting up when using a custom access address (#11388, @derselbst)</li>
+<li>Fix the Auto Bump PR is blocked by the label <code>do-not-merge/release-note-label-needed</code> by adding dependabot <code>release-note-none</code> label. (#11256, @yankay)</li>
+<li>Fix kube_reserved so it only controls kubeReservedCgroup . (#11367, @rptaylor)</li>
+<li>Disables reconfiguring the cluster during upgrade (remove &ndash;config option from kubeadm upgrade apply) (#11352, @tmurakam)</li>
+<li>Fix error in boostrap-os when git does not handle symlinks (#11508, @VannTen)</li>
+<li>Fix static kube-apiserver advertise address based on first control plane (#11457, @Seljuke)</li>
+<li>Fix incorrect member matching when removing etcd nodes (#11488, @ErikJiang)</li>
+<li>Fix double pop of access_ip (#11435, @rptaylor)</li>
+<li>Fix use super-admin.conf for kube-vip on first master when it exists to support initial k8s v1.29+ installation with kube-vip enabled (#11422, @Seljuke)</li>
+</ul>
+
+<h3 id="other-cleanup-or-flake">Other (Cleanup or Flake)</h3>
+
+<ul>
+<li>Contrib playbooks are no longer included in the ansible kubespray collection (#11239, @VannTen)</li>
+<li>Reduced required python packages in requirements.txt (#11199, @itayporezky)</li>
+<li>Fix openstack cleanup by change the delete  security_group order (#11299, @yankay)</li>
+<li>RHEL 7, Centos 7 and derivatives are no longer supported. (#11246, @VannTen)</li>
+<li>Use TasksMask=infinity on ostree systems for docker systemd service (#11493, @VannTen)</li>
+</ul>
+
+<h2 id="supported-components">Supported Components</h2>
+
+<ul>
+<li>Core
+
+<ul>
+<li><a href="https://github.com/kubernetes/kubernetes" target="_blank">kubernetes</a> v1.30.4</li>
+<li><a href="https://github.com/etcd-io/etcd" target="_blank">etcd</a> v3.5.12</li>
+<li><a href="https://www.docker.com/" target="_blank">docker</a> v26.1</li>
+<li><a href="https://containerd.io/" target="_blank">containerd</a> v1.7.21</li>
+<li><a href="http://cri-o.io/" target="_blank">cri-o</a> v1.30.3 (experimental: see <a href="docs/CRI/cri-o.md" target="_blank">CRI-O Note</a>. Only on fedora, ubuntu and centos based OS)</li>
+</ul></li>
+<li>Network Plugin
+
+<ul>
+<li><a href="https://github.com/containernetworking/plugins" target="_blank">cni-plugins</a> v1.2.0</li>
+<li><a href="https://github.com/projectcalico/calico" target="_blank">calico</a> v3.28.1</li>
+<li><a href="https://github.com/cilium/cilium" target="_blank">cilium</a> v1.15.4</li>
+<li><a href="https://github.com/flannel-io/flannel" target="_blank">flannel</a> v0.22.0</li>
+<li><a href="https://github.com/alauda/kube-ovn" target="_blank">kube-ovn</a> v1.12.21</li>
+<li><a href="https://github.com/cloudnativelabs/kube-router" target="_blank">kube-router</a> v2.0.0</li>
+<li><a href="https://github.com/k8snetworkplumbingwg/multus-cni" target="_blank">multus</a> v3.8</li>
+<li><a href="https://github.com/rajch/weave" target="_blank">weave</a> v2.8.7</li>
+<li><a href="https://github.com/kube-vip/kube-vip" target="_blank">kube-vip</a> v0.8.0</li>
+</ul></li>
+<li>Application
+
+<ul>
+<li><a href="https://github.com/jetstack/cert-manager" target="_blank">cert-manager</a> v1.14.7</li>
+<li><a href="https://github.com/coredns/coredns" target="_blank">coredns</a> v1.11.1</li>
+<li><a href="https://github.com/kubernetes/ingress-nginx" target="_blank">ingress-nginx</a> v1.11.2</li>
+<li><a href="https://github.com/kubernetes-sigs/krew" target="_blank">krew</a> v0.4.4</li>
+<li><a href="https://argoproj.github.io/" target="_blank">argocd</a> v2.11.0</li>
+<li><a href="https://helm.sh/" target="_blank">helm</a> v3.15.4</li>
+<li><a href="https://metallb.universe.tf/" target="_blank">metallb</a>  v0.13.9</li>
+<li><a href="https://github.com/distribution/distribution" target="_blank">registry</a> v2.8.1</li>
+</ul></li>
+<li>Storage Plugin
+
+<ul>
+<li><a href="https://github.com/kubernetes-incubator/external-storage" target="_blank">cephfs-provisioner</a> v2.1.0-k8s1.11</li>
+<li><a href="https://github.com/kubernetes-incubator/external-storage" target="_blank">rbd-provisioner</a> v2.1.1-k8s1.11</li>
+<li><a href="https://github.com/kubernetes-sigs/aws-ebs-csi-driver" target="_blank">aws-ebs-csi-plugin</a> v0.5.0</li>
+<li><a href="https://github.com/kubernetes-sigs/azuredisk-csi-driver" target="_blank">azure-csi-plugin</a> v1.10.0</li>
+<li><a href="https://github.com/kubernetes/cloud-provider-openstack/blob/master/docs/cinder-csi-plugin/using-cinder-csi-plugin.md" target="_blank">cinder-csi-plugin</a> v1.30.0</li>
+<li><a href="https://github.com/kubernetes-sigs/gcp-compute-persistent-disk-csi-driver" target="_blank">gcp-pd-csi-plugin</a> v1.9.2</li>
+<li><a href="https://github.com/rancher/local-path-provisioner" target="_blank">local-path-provisioner</a> v0.0.24</li>
+<li><a href="https://github.com/kubernetes-sigs/sig-storage-local-static-provisioner" target="_blank">local-volume-provisioner</a> v2.5.0</li>
+<li><a href="https://github.com/kubernetes-sigs/node-feature-discovery" target="_blank">node-feature-discovery</a> v0.16.4</li>
+</ul></li>
+</ul>
+
+<h2 id="known-issues">Known issues</h2>
+
+<p>N/A</p>
+
+<h2 id="notes">Notes</h2>
+
+<ul>
+<li>Deprecating support for Centos7</li>
+<li>The Ansible version has been upgrade to 9.8.0</li>
+<li>Change weave CNI to community version <a href="https://github.com/weaveworks/weave" target="_blank">https://github.com/weaveworks/weave</a></li>
+</ul>
+
+<h2 id="maintainers">Maintainers</h2>
+
+<p>Great respect for joining maintainers 🎉</p>
+
+<ul>
+<li>Adding myself (VannTen) as approver #11483 @VannTen</li>
+<li>Add tico88612 as reviewer #11453 @tico88612</li>
+<li>owners: move ant31 from emeritus_approvers to approvers #11247 @ant31</li>
+</ul>
+<br><h2>kubernetes-csi/csi-driver-nfs</h2> <h3>Release notes for v4.9.0 release</h3><h4>2024-09-03</h4><h2 id="what-s-changed">What&rsquo;s Changed</h2>
+
+<ul>
+<li>doc: cut v4.8.0 release by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/710" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/710</a></li>
+<li>fix: CVE-2024-5321 by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/715" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/715</a></li>
+<li>chore(deps): bump k8s.io/client-go from 0.28.11 to 0.28.12 by @dependabot in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/714" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/714</a></li>
+<li>fix: unmount detection failure by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/718" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/718</a></li>
+<li>fix: unmount detection failure by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/719" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/719</a></li>
+<li>fix: tmp path mount permission error on charts by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/720" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/720</a></li>
+<li>chore(deps): bump github.com/onsi/gomega from 1.33.1 to 1.34.0 by @dependabot in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/723" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/723</a></li>
+<li>chore(deps): bump github.com/onsi/ginkgo/v2 from 2.19.0 to 2.19.1 by @dependabot in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/724" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/724</a></li>
+<li>fix: add pv patch permission with HonorPVReclaimPolicy enabled by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/725" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/725</a></li>
+<li>chore(deps): bump github.com/onsi/gomega from 1.34.0 to 1.34.1 by @dependabot in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/726" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/726</a></li>
+<li>chore(deps): bump golang.org/x/net from 0.27.0 to 0.28.0 by @dependabot in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/727" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/727</a></li>
+<li>Update README.md by @kpol-lgx in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/728" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/728</a></li>
+<li>fix: archive dir error by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/729" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/729</a></li>
+<li>test: add default namespace in examples to fix e2e test failure by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/733" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/733</a></li>
+<li>chore(deps): bump github.com/onsi/ginkgo/v2 from 2.19.1 to 2.20.0 by @dependabot in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/730" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/730</a></li>
+<li>fix: upgrade csi-provisioner to v5.0.2 to fix pv deletion stuck issue by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/734" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/734</a></li>
+<li>fix: archive dir error#2 by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/735" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/735</a></li>
+<li>Update README.md by @kpol-lgx in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/738" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/738</a></li>
+<li>fix: bump mount-utils to treat ENODEV error as corrupted mount by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/743" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/743</a></li>
+<li>chore(deps): bump github.com/onsi/ginkgo/v2 from 2.20.0 to 2.20.1 by @dependabot in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/749" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/749</a></li>
+<li>fix: upgrade to csi-provisioner v5.0.2 on v4.8.0 chart by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/750" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/750</a></li>
+<li>chore(deps): bump github.com/onsi/gomega from 1.34.1 to 1.34.2 by @dependabot in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/751" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/751</a></li>
+<li>doc: add support doc by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/753" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/753</a></li>
+<li>chore(deps): bump google.golang.org/grpc from 1.65.0 to 1.66.0 by @dependabot in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/752" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/752</a></li>
+<li>chore(deps): bump github.com/onsi/ginkgo/v2 from 2.20.1 to 2.20.2 by @dependabot in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/755" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/755</a></li>
+<li>fix: delete volume error in archive deletion mode by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/754" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/754</a></li>
+</ul>
+
+<h2 id="new-contributors">New Contributors</h2>
+
+<ul>
+<li>@kpol-lgx made their first contribution in <a href="https://github.com/kubernetes-csi/csi-driver-nfs/pull/728" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/pull/728</a></li>
+</ul>
+
+<p><strong>Full Changelog</strong>: <a href="https://github.com/kubernetes-csi/csi-driver-nfs/compare/v4.8.0...v4.9.0" target="_blank">https://github.com/kubernetes-csi/csi-driver-nfs/compare/v4.8.0&hellip;v4.9.0</a></p>
+<br><h2>kubernetes-csi/csi-driver-host-path</h2> <h3>Release notes for v1.15.0</h3><h4>2024-09-05</h4><h1 id="container">Container</h1>
+
+<p><code>docker pull registry.k8s.io/sig-storage/hostpathplugin:v1.15.0</code></p>
+
+<h1 id="full-changelog">Full Changelog</h1>
+
+<p><a href="https://github.com/kubernetes-csi/csi-driver-host-path/blob/master/CHANGELOG/CHANGELOG-1.15.md" target="_blank">https://github.com/kubernetes-csi/csi-driver-host-path/blob/master/CHANGELOG/CHANGELOG-1.15.md</a></p>
+<br><h2>kubernetes-csi/csi-driver-smb</h2> <h3>Release notes for v1.16.0 release</h3><h4>2024-09-03</h4><h2 id="what-s-changed">What&rsquo;s Changed</h2>
+
+<ul>
+<li>doc: cut v1.15.0 release by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/803" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/803</a></li>
+<li>fix: CVE-2024-5321 by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/806" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/806</a></li>
+<li>fix: revert v1.14.0 chart change by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/808" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/808</a></li>
+<li>fix: unmount detection failure by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/811" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/811</a></li>
+<li>fix: tmp path mount permission issue by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/812" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/812</a></li>
+<li>fix: add pv patch permission with HonorPVReclaimPolicy enabled by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/813" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/813</a></li>
+<li>fix: node kerberos cache volume name by @pas-n in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/815" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/815</a></li>
+<li>test: add default namespace in examples to fix e2e test failure by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/817" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/817</a></li>
+<li>test: fix external test failure by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/819" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/819</a></li>
+<li>test: fix windows e2e test failure by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/820" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/820</a></li>
+<li>fix: upgrade csi-provisioner to v5.0.2 to fix pv deletion stuck issue by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/824" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/824</a></li>
+<li>test: fix windows test failure2 by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/822" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/822</a></li>
+<li>test: fix windows 2022 test failure by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/825" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/825</a></li>
+<li>chore: upgrade golang.org/x/net by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/816" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/816</a></li>
+<li>cleanup: use one image tag in e2e test by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/826" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/826</a></li>
+<li>fix: bump mount-utils to treat ENODEV error as corrupted mount by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/827" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/827</a></li>
+<li>fix: upgrade csi-provisioner to v5.0.2 on v1.15.0 chart by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/829" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/829</a></li>
+<li>test: skip one flacky windows test by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/832" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/832</a></li>
+<li>doc: add support doc by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/833" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/833</a></li>
+<li>fix: delete volume error in archive deletion mode by @andyzhangx in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/831" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/831</a></li>
+</ul>
+
+<h2 id="new-contributors">New Contributors</h2>
+
+<ul>
+<li>@pas-n made their first contribution in <a href="https://github.com/kubernetes-csi/csi-driver-smb/pull/815" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/pull/815</a></li>
+</ul>
+
+<p><strong>Full Changelog</strong>: <a href="https://github.com/kubernetes-csi/csi-driver-smb/compare/v1.15.0...v1.16.0" target="_blank">https://github.com/kubernetes-csi/csi-driver-smb/compare/v1.15.0&hellip;v1.16.0</a></p>
+<br>
+</body>
+
+</html>
