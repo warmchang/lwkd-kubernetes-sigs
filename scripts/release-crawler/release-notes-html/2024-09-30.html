@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Whats new in the last week</title>
+</head>
+
+<body>
+<h1>Latest Releases for the week 2024-09-23 - 2024-09-30</h1><h2>grpc/grpc</h2> <h3>Release notes for Release v1.66.2</h3><h4>2024-09-28</h4><p>This is release gRPC Core 1.66.2 (gladiator).</p>
+
+<p>For gRPC documentation, see <a href="https://grpc.io/" target="_blank">grpc.io</a>. For previous releases, see <a href="https://github.com/grpc/grpc/releases" target="_blank">Releases</a>.</p>
+
+<p>This release contains refinements, improvements, and bug fixes.</p>
+
+<h2 id="what-s-changed">What&rsquo;s Changed</h2>
+
+<h3 id="python">Python</h3>
+
+<ul>
+<li>Added support for Python 3.13 and templating system for supported Python versions (#37643)</li>
+</ul>
+
+<p><strong>Full Changelog</strong>: <a href="https://github.com/grpc/grpc/compare/v1.66.1...v1.66.2" target="_blank">https://github.com/grpc/grpc/compare/v1.66.1&hellip;v1.66.2</a></p>
+<br><h2>prometheus/prometheus</h2> <h3>Release notes for 2.55.0-rc.0 / 2024-09-20</h3><h4>2024-09-23</h4><p>While all the excitement is focused on Prometheus 3.0, we are preparing release 2.55.</p>
+
+<p>This release has quite a few new features, some of which require a feature-flag to enable, a major optimisation of queries when out-of-order data is present, and a number of bug-fixes.</p>
+
+<ul>
+<li>[FEATURE] Support UTF-8 characters in label names - feature flag <code>utf8-names</code>. #14482, #14880, #14736, #14727</li>
+<li>[FEATURE] Support config reload automatically - feature flag <code>auto-reload-config</code>. #14769</li>
+<li>[FEATURE] Scraping: Add the ability to set custom <code>http_headers</code> in config. #14817</li>
+<li>[FEATURE] Scraping: Support feature flag <code>created-timestamp-zero-ingestion</code> in OpenMetrics. #14356, #14815</li>
+<li>[FEATURE] Scraping: <code>scrape_failure_log_file</code> option to log failures to a file. #14734</li>
+<li>[FEATURE] PromQL: Delay removal of <code>__name__</code> label - feature flag <code>promql-delayed-name-removal</code>. #14477</li>
+<li>[FEATURE] OTLP receiver: Optional promotion of resource attributes to series labels. #14200</li>
+<li>[FEATURE] API: Support multiple <code>--web.listen-address</code>. #14665</li>
+<li>[FEATURE] Remote-Write: Support Google Cloud Monitoring authorization. #14346</li>
+<li>[FEATURE] Promtool: <code>tsdb create-blocks</code> new option to add labels. #14403</li>
+<li>[FEATURE] Promtool: <code>promtool test</code> adds <code>--junit</code> flag to format results. #14506</li>
+<li>[ENHANCEMENT] OTLP receiver: Warn on exponential histograms with zero count and non-zero sum. #14706</li>
+<li>[ENHANCEMENT] OTLP receiver: Interrupt translation on context cancellation/timeout. #14612</li>
+<li>[ENHANCEMENT] PromQL: Improve detail in distributed tracing. #14816</li>
+<li>[ENHANCEMENT] PromQL: Experimental <code>sort_by_label</code> and <code>sort_by_label_desc</code> sort by all labels when label is equal. #14655</li>
+<li>[ENHANCEMENT] PromQL: Clarify error message logged when Go runtime panic occurs during query evaluation. #14621</li>
+<li>[ENHANCEMENT] PromQL: Use Kahan summation for better accuracy in <code>avg</code> and <code>avg_over_time</code>. #14413</li>
+<li>[ENHANCEMENT] TSDB: Backward compatibility with upcoming index v3. #14934</li>
+<li>[PERF] Remote-Read: Support streaming mode. #11379</li>
+<li>[PERF] TSDB: Query in-order and out-of-order series together. #14354, #14693, #14714, #14831, #14874, #14948</li>
+<li>[PERF] TSDB: Streamline reading of overlapping out-of-order head chunks. #14729</li>
+<li>[BUGFIX] SD: Fix dropping targets (with feature flag <code>new-service-discovery-manager</code>). #13147</li>
+<li>[BUGFIX] SD: Stop storing stale targets (with feature flag <code>new-service-discovery-manager</code>). #13622</li>
+<li>[BUGFIX] fix(utf8): propagate validationScheme config to scraping options. #14880</li>
+<li>[BUGFIX] PromQL: Experimental Native Histograms: Do not re-use spans between histograms. #14771</li>
+<li>[BUGFIX] Scraping: exemplars could be dropped in protobuf scraping. #14810</li>
+<li>[BUGFIX] Remote-Write: fix metadata sending for experimental Remote-Write V2. #14766</li>
+<li>[BUGFIX] Remote-Write: Return 4xx not 5xx when timeseries has duplicate label. #14716</li>
+<li>[BUGFIX] Experimental Native Histograms: many fixes for incorrect results, panics, warnings. #14598, #14611, #14609, #14575, #14513, #14821</li>
+<li>[BUGFIX] TSDB: Only count unknown record types in <code>record_decode_failures_total</code> metric. #14042</li>
+<li>[ENHANCEMENT] Remote-Write: Don&rsquo;t reshard if we haven&rsquo;t successfully sent a sample since last update. #14450</li>
+</ul>
+<br>
+</body>
+
+</html>
