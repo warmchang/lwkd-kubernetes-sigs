@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Whats new in the last week</title>
+</head>
+
+<body>
+<h1>Latest Releases for the week 2024-10-07 - 2024-10-14</h1><h2>cri-o/cri-o</h2> <h3>Release notes for v1.28.11</h3><h4>2024-10-07</h4><ul>
+<li><a href="#cri-o-v12811">CRI-O v1.28.11</a>
+
+<ul>
+<li><a href="#downloads">Downloads</a></li>
+<li><a href="#changelog-since-v12810">Changelog since v1.28.10</a>
+
+<ul>
+<li><a href="#changes-by-kind">Changes by Kind</a>
+
+<ul>
+<li><a href="#uncategorized">Uncategorized</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#dependencies">Dependencies</a>
+
+<ul>
+<li><a href="#added">Added</a></li>
+<li><a href="#changed">Changed</a></li>
+<li><a href="#removed">Removed</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h1 id="cri-o-v1-28-11">CRI-O v1.28.11</h1>
+
+<p>The release notes have been generated for the commit range
+<a href="https://github.com/cri-o/cri-o/compare/v1.28.10...v1.28.11" target="_blank">v1.28.10&hellip;v1.28.11</a> on Mon, 07 Oct 2024 08:35:15 UTC.</p>
+
+<h2 id="downloads">Downloads</h2>
+
+<p>Download one of our static release bundles via our Google Cloud Bucket:</p>
+
+<ul>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.28.11.tar.gz" target="_blank">cri-o.amd64.v1.28.11.tar.gz</a>
+
+<ul>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.28.11.tar.gz.sha256sum" target="_blank">cri-o.amd64.v1.28.11.tar.gz.sha256sum</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.28.11.tar.gz.sig" target="_blank">cri-o.amd64.v1.28.11.tar.gz.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.28.11.tar.gz.cert" target="_blank">cri-o.amd64.v1.28.11.tar.gz.cert</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.28.11.tar.gz.spdx" target="_blank">cri-o.amd64.v1.28.11.tar.gz.spdx</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.28.11.tar.gz.spdx.sig" target="_blank">cri-o.amd64.v1.28.11.tar.gz.spdx.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.28.11.tar.gz.spdx.cert" target="_blank">cri-o.amd64.v1.28.11.tar.gz.spdx.cert</a></li>
+</ul></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.28.11.tar.gz" target="_blank">cri-o.arm64.v1.28.11.tar.gz</a>
+
+<ul>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.28.11.tar.gz.sha256sum" target="_blank">cri-o.arm64.v1.28.11.tar.gz.sha256sum</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.28.11.tar.gz.sig" target="_blank">cri-o.arm64.v1.28.11.tar.gz.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.28.11.tar.gz.cert" target="_blank">cri-o.arm64.v1.28.11.tar.gz.cert</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.28.11.tar.gz.spdx" target="_blank">cri-o.arm64.v1.28.11.tar.gz.spdx</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.28.11.tar.gz.spdx.sig" target="_blank">cri-o.arm64.v1.28.11.tar.gz.spdx.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.28.11.tar.gz.spdx.cert" target="_blank">cri-o.arm64.v1.28.11.tar.gz.spdx.cert</a></li>
+</ul></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.28.11.tar.gz" target="_blank">cri-o.ppc64le.v1.28.11.tar.gz</a>
+
+<ul>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.28.11.tar.gz.sha256sum" target="_blank">cri-o.ppc64le.v1.28.11.tar.gz.sha256sum</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.28.11.tar.gz.sig" target="_blank">cri-o.ppc64le.v1.28.11.tar.gz.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.28.11.tar.gz.cert" target="_blank">cri-o.ppc64le.v1.28.11.tar.gz.cert</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.28.11.tar.gz.spdx" target="_blank">cri-o.ppc64le.v1.28.11.tar.gz.spdx</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.28.11.tar.gz.spdx.sig" target="_blank">cri-o.ppc64le.v1.28.11.tar.gz.spdx.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.ppc64le.v1.28.11.tar.gz.spdx.cert" target="_blank">cri-o.ppc64le.v1.28.11.tar.gz.spdx.cert</a></li>
+</ul></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.28.11.tar.gz" target="_blank">cri-o.s390x.v1.28.11.tar.gz</a>
+
+<ul>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.28.11.tar.gz.sha256sum" target="_blank">cri-o.s390x.v1.28.11.tar.gz.sha256sum</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.28.11.tar.gz.sig" target="_blank">cri-o.s390x.v1.28.11.tar.gz.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.28.11.tar.gz.cert" target="_blank">cri-o.s390x.v1.28.11.tar.gz.cert</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.28.11.tar.gz.spdx" target="_blank">cri-o.s390x.v1.28.11.tar.gz.spdx</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.28.11.tar.gz.spdx.sig" target="_blank">cri-o.s390x.v1.28.11.tar.gz.spdx.sig</a></li>
+<li><a href="https://storage.googleapis.com/cri-o/artifacts/cri-o.s390x.v1.28.11.tar.gz.spdx.cert" target="_blank">cri-o.s390x.v1.28.11.tar.gz.spdx.cert</a></li>
+</ul></li>
+</ul>
+
+<p>To verify the artifact signatures via <a href="https://github.com/sigstore/cosign" target="_blank">cosign</a>, run:</p>
+
+<pre><code class="language-console">&gt; export COSIGN_EXPERIMENTAL=1
+&gt; cosign verify-blob cri-o.amd64.v1.28.11.tar.gz \
+    --certificate-identity https://github.com/cri-o/cri-o/.github/workflows/test.yml@refs/tags/v1.28.11 \
+    --certificate-oidc-issuer https://token.actions.githubusercontent.com \
+    --certificate-github-workflow-repository cri-o/cri-o \
+    --certificate-github-workflow-ref refs/tags/v1.28.11 \
+    --signature cri-o.amd64.v1.28.11.tar.gz.sig \
+    --certificate cri-o.amd64.v1.28.11.tar.gz.cert
+</code></pre>
+
+<p>To verify the bill of materials (SBOM) in <a href="https://spdx.org" target="_blank">SPDX</a> format using the <a href="https://sigs.k8s.io/bom" target="_blank">bom</a> tool, run:</p>
+
+<pre><code class="language-console">&gt; tar xfz cri-o.amd64.v1.28.11.tar.gz
+&gt; bom validate -e cri-o.amd64.v1.28.11.tar.gz.spdx -d cri-o
+</code></pre>
+
+<h2 id="changelog-since-v1-28-10">Changelog since v1.28.10</h2>
+
+<h3 id="changes-by-kind">Changes by Kind</h3>
+
+<h4 id="uncategorized">Uncategorized</h4>
+
+<ul>
+<li>Fix a bug where the GID is not added to /etc/group when run_as_group is set (#8564, @kwilczynski)</li>
+<li>Fixed container stats label filtering. (#8576, @openshift-cherrypick-robot)</li>
+</ul>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<h3 id="added">Added</h3>
+
+<p><em>Nothing has changed.</em></p>
+
+<h3 id="changed">Changed</h3>
+
+<p><em>Nothing has changed.</em></p>
+
+<h3 id="removed">Removed</h3>
+
+<p><em>Nothing has changed.</em></p>
+<br><h2>kubernetes-sigs/cluster-api</h2> <h3>Release notes for v1.8.4</h3><h4>2024-10-08</h4><h2 id="kubernetes-version-support">👌 Kubernetes version support</h2>
+
+<ul>
+<li>Management Cluster: v1.27.x -&gt; v1.31.x</li>
+<li>Workload Cluster: v1.25.x -&gt; v1.31.x</li>
+</ul>
+
+<p><a href="https://cluster-api.sigs.k8s.io/reference/versions.html" target="_blank">More information about version support can be found here</a></p>
+
+<h2 id="changes-since-v1-8-3">Changes since v1.8.3</h2>
+
+<h2 id="chart-with-upwards-trend-overview">:chart_with_upwards_trend: Overview</h2>
+
+<ul>
+<li>15 new commits merged</li>
+<li>2 bugs fixed 🐛</li>
+</ul>
+
+<h2 id="bug-bug-fixes">:bug: Bug Fixes</h2>
+
+<ul>
+<li>CI: Hack: fix the shell used when running pr-verify (#11170)</li>
+<li>ClusterClass: Fix nil pointer for empty workers in webhook (#11198)</li>
+</ul>
+
+<h2 id="seedling-others">:seedling: Others</h2>
+
+<ul>
+<li>CI: Pr-verify: use env var for passing the PR title (#11230)</li>
+<li>CI: Replace kubebuilder-release-tools with new workflow (#11167)</li>
+<li>CI: Switch to using ECR mirror for trivy DB repo in weekly security scan (#11261)</li>
+<li>ClusterCacheTracker: Add cacheSyncPeriod option to ClusterCacheTracker (#11249)</li>
+<li>clusterctl: Add vultr infrastructure provider (#11217)</li>
+<li>clusterctl: Bump cert manager to v1.16.0 (#11264)</li>
+<li>clusterctl: Update RKE2 provider URL (#11225)</li>
+<li>e2e: Test/e2e: decrease concurrency (#11222)</li>
+<li>Logging: Reduce verbosity of logs when calling Runtime Extensions (#11200)</li>
+<li>Machine: Prevent error spamming for NodeOutdatedTaint if objects are not found (#11199)</li>
+<li>Testing: Test/framework: allow users to modify cache.Options (#11203)</li>
+<li>Testing: Test/framework: GetCAPIResources should warn on rbac issues (#11206)</li>
+</ul>
+
+<p>:book: Additionally, there has been 1 contribution to our documentation and book. (#11177)</p>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<h3 id="added">Added</h3>
+
+<p><em>Nothing has changed.</em></p>
+
+<h3 id="changed">Changed</h3>
+
+<p><em>Nothing has changed.</em></p>
+
+<h3 id="removed">Removed</h3>
+
+<p><em>Nothing has changed.</em></p>
+
+<p><em>Thanks to all our contributors!</em> 😊</p>
+<br><h3>Release notes for v1.7.7</h3><h4>2024-10-08</h4><h2 id="kubernetes-version-support">👌 Kubernetes version support</h2>
+
+<ul>
+<li>Management Cluster: v1.26.x -&gt; v1.30.x</li>
+<li>Workload Cluster: v1.24.x -&gt; v1.30.x</li>
+</ul>
+
+<p><a href="https://cluster-api.sigs.k8s.io/reference/versions.html" target="_blank">More information about version support can be found here</a></p>
+
+<h2 id="changes-since-v1-7-6">Changes since v1.7.6</h2>
+
+<h2 id="chart-with-upwards-trend-overview">:chart_with_upwards_trend: Overview</h2>
+
+<ul>
+<li>6 new commits merged</li>
+<li>1 bug fixed 🐛</li>
+</ul>
+
+<h2 id="bug-bug-fixes">:bug: Bug Fixes</h2>
+
+<ul>
+<li>CI: Hack: fix the shell used when running pr-verify (#11171)</li>
+</ul>
+
+<h2 id="seedling-others">:seedling: Others</h2>
+
+<ul>
+<li>CI: Pr-verify: use env var for passing the PR title (#11231)</li>
+<li>CI: Replace kubebuilder-release-tools with new workflow (#11168)</li>
+<li>CI: Switch to using ECR mirror for trivy DB repo in weekly security scan (#11262)</li>
+<li>clusterctl: Bump cert manager to v1.16.0 (#11265)</li>
+<li>clusterctl: Update RKE2 provider URL (#11226)</li>
+</ul>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<h3 id="added">Added</h3>
+
+<p><em>Nothing has changed.</em></p>
+
+<h3 id="changed">Changed</h3>
+
+<p><em>Nothing has changed.</em></p>
+
+<h3 id="removed">Removed</h3>
+
+<p><em>Nothing has changed.</em></p>
+
+<p><em>Thanks to all our contributors!</em> 😊</p>
+<br><h2>kubernetes-sigs/kustomize</h2> <h3>Release notes for kyaml/v0.18.1</h3><h4>2024-10-09</h4><p>This is a patch release of kyaml that was created due to a defect in the release process.
+Please check <a href="https://github.com/kubernetes-sigs/kustomize/releases/tag/kyaml%2Fv0.18.0" target="_blank">https://github.com/kubernetes-sigs/kustomize/releases/tag/kyaml%2Fv0.18.0</a></p>
+<br><h3>Release notes for kustomize/v5.5.0</h3><h4>2024-10-09</h4><h1 id="breaking-change">Breaking change</h1>
+
+<p>A starlark support for krm functions was removed to cleanup dependencies. <a href="https://github.com/kubernetes-sigs/kustomize/pull/5768" target="_blank">https://github.com/kubernetes-sigs/kustomize/pull/5768</a>
+This feature was deprecated 3 years ago and removed because there was no desire to continue using it.
+<a href="https://github.com/kubernetes-sigs/kustomize/pull/5768#issuecomment-2374680641" target="_blank">https://github.com/kubernetes-sigs/kustomize/pull/5768#issuecomment-2374680641</a></p>
+
+<h2 id="feature">Feature</h2>
+
+<p>#5751: Add <code>--helm-debug</code> Flag to Kustomize for Enhanced Helm Debugging</p>
+
+<h2 id="fix-bugs">Fix Bugs</h2>
+
+<p>#5458: Sort built-in Namespace kind before CRDs with the same name
+#5745: Add Annotation to Control Inline List Conversion in Kustomize Resources&rdquo;</p>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<p>#5763: Update go 1.22.7
+#5781: Update kyaml to v0.18.1
+#5782: Update cmd/config to v0.15.0
+#5783: Update api to v0.18.0</p>
+<br><h3>Release notes for cmd/config/v0.15.0</h3><h4>2024-10-09</h4><h2 id="chore">chore</h2>
+
+<p>#5763: Update go 1.22.7
+#5768: Remove starlark support
+#5781: Update kyaml to v0.18.1</p>
+<br><h3>Release notes for api/v0.18.0</h3><h4>2024-10-09</h4><h2 id="breaking-change">Breaking change</h2>
+
+<p>#5768: Remove starlark support</p>
+
+<h2 id="feature">Feature</h2>
+
+<p>#5751: Add <code>--helm-debug</code> Flag to Kustomize for Enhanced Helm Debugging</p>
+
+<h2 id="fix-bugs">Fix Bugs</h2>
+
+<p>#5458: Sort built-in Namespace kind before CRDs with the same name
+#5745: Add Annotation to Control Inline List Conversion in Kustomize Resources&rdquo;</p>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<p>#5781: Update kyaml to v0.18.1
+#5763: Update go 1.22.7</p>
+<br><h3>Release notes for kyaml/v0.18.0</h3><h4>2024-10-09</h4><h2 id="breaking-change">Breaking change</h2>
+
+<p>A starlark support for krm functions was removed to cleanup dependencies. <a href="https://github.com/kubernetes-sigs/kustomize/pull/5768" target="_blank">https://github.com/kubernetes-sigs/kustomize/pull/5768</a>
+This feature was deprecated long ago and removed because there was no desire to continue using it.
+<a href="https://github.com/kubernetes-sigs/kustomize/pull/5768#issuecomment-2374680641" target="_blank">https://github.com/kubernetes-sigs/kustomize/pull/5768#issuecomment-2374680641</a></p>
+
+<h2 id="what-s-changed">What&rsquo;s Changed</h2>
+
+<ul>
+<li>docs: update patchMultipleObject example to filter with labelSelector by @johnzheng1975 in <a href="https://github.com/kubernetes-sigs/kustomize/pull/5700" target="_blank">https://github.com/kubernetes-sigs/kustomize/pull/5700</a></li>
+<li>Remove misleading documentation about config generation by @VannTen in <a href="https://github.com/kubernetes-sigs/kustomize/pull/5716" target="_blank">https://github.com/kubernetes-sigs/kustomize/pull/5716</a></li>
+<li>Sort built-in Namespace kind before CRDs with the same name by @danielwilsonkainos in <a href="https://github.com/kubernetes-sigs/kustomize/pull/5458" target="_blank">https://github.com/kubernetes-sigs/kustomize/pull/5458</a></li>
+<li>Docs: fix kubectl command by @Kavinjsir in <a href="https://github.com/kubernetes-sigs/kustomize/pull/5760" target="_blank">https://github.com/kubernetes-sigs/kustomize/pull/5760</a></li>
+<li>Add Annotation to Control Inline List Conversion in Kustomize Resources&rdquo; by @isarns in <a href="https://github.com/kubernetes-sigs/kustomize/pull/5745" target="_blank">https://github.com/kubernetes-sigs/kustomize/pull/5745</a></li>
+<li>Add <code>--helm-debug</code> Flag to Kustomize for Enhanced Helm Debugging by @isarns in <a href="https://github.com/kubernetes-sigs/kustomize/pull/5751" target="_blank">https://github.com/kubernetes-sigs/kustomize/pull/5751</a></li>
+<li>Update go 1.22.7 by @koba1t in <a href="https://github.com/kubernetes-sigs/kustomize/pull/5763" target="_blank">https://github.com/kubernetes-sigs/kustomize/pull/5763</a></li>
+<li>Remove starlark support by @dims in <a href="https://github.com/kubernetes-sigs/kustomize/pull/5768" target="_blank">https://github.com/kubernetes-sigs/kustomize/pull/5768</a></li>
+</ul>
+
+<h2 id="new-contributors">New Contributors</h2>
+
+<ul>
+<li>@johnzheng1975 made their first contribution in <a href="https://github.com/kubernetes-sigs/kustomize/pull/5700" target="_blank">https://github.com/kubernetes-sigs/kustomize/pull/5700</a></li>
+<li>@VannTen made their first contribution in <a href="https://github.com/kubernetes-sigs/kustomize/pull/5716" target="_blank">https://github.com/kubernetes-sigs/kustomize/pull/5716</a></li>
+<li>@danielwilsonkainos made their first contribution in <a href="https://github.com/kubernetes-sigs/kustomize/pull/5458" target="_blank">https://github.com/kubernetes-sigs/kustomize/pull/5458</a></li>
+<li>@Kavinjsir made their first contribution in <a href="https://github.com/kubernetes-sigs/kustomize/pull/5760" target="_blank">https://github.com/kubernetes-sigs/kustomize/pull/5760</a></li>
+<li>@isarns made their first contribution in <a href="https://github.com/kubernetes-sigs/kustomize/pull/5745" target="_blank">https://github.com/kubernetes-sigs/kustomize/pull/5745</a></li>
+</ul>
+
+<p><strong>Full Changelog</strong>: <a href="https://github.com/kubernetes-sigs/kustomize/compare/kustomize/v5.4.3...kyaml/v0.18.0" target="_blank">https://github.com/kubernetes-sigs/kustomize/compare/kustomize/v5.4.3&hellip;kyaml/v0.18.0</a></p>
+<br><h2>grpc/grpc</h2> <h3>Release notes for Release v1.67.0</h3><h4>2024-10-08</h4><p>This is release 1.67.0 (<a href="https://github.com/grpc/grpc/blob/master/doc/g_stands_for.md" target="_blank">gesundheit</a>) of gRPC Core.</p>
+
+<p>For gRPC documentation, see <a href="https://grpc.io/" target="_blank">grpc.io</a>. For previous releases, see <a href="https://github.com/grpc/grpc/releases" target="_blank">Releases</a>.</p>
+
+<p>This release contains refinements, improvements, and bug fixes, with highlights listed below.</p>
+
+<h2 id="core">Core</h2>
+
+<ul>
+<li>[ruby] reduce an INFO log to DEBUG (backport <a href="https://github.com/grpc/grpc/pull/37633" target="_blank">https://github.com/grpc/grpc/pull/37633</a>). (<a href="https://github.com/grpc/grpc/pull/37686" target="_blank">#37686</a>)</li>
+<li>[release] Bump core version to 44.0.0. (<a href="https://github.com/grpc/grpc/pull/37661" target="_blank">#37661</a>)</li>
+<li>[RlsLB] Fix Deadlock. (<a href="https://github.com/grpc/grpc/pull/37459" target="_blank">#37459</a>)</li>
+<li>[Python Otel] Manage call tracer life cycle use call arena. (<a href="https://github.com/grpc/grpc/pull/37460" target="_blank">#37460</a>)</li>
+</ul>
+
+<h2 id="c">C++</h2>
+
+<ul>
+<li>[OTel C++] Fix race when adding and removing callbacks. (<a href="https://github.com/grpc/grpc/pull/37485" target="_blank">#37485</a>)</li>
+</ul>
+
+<h2 id="python">Python</h2>
+
+<ul>
+<li>[Backport to 1.67.x] Add templating and support for Python 3.13 (#37643). (<a href="https://github.com/grpc/grpc/pull/37803" target="_blank">#37803</a>)</li>
+<li>Add templating and support for Python 3.13. (<a href="https://github.com/grpc/grpc/pull/37643" target="_blank">#37643</a>)</li>
+<li>[Python Distrib] Change warning to RuntimeError for version incompatibility. (<a href="https://github.com/grpc/grpc/pull/37466" target="_blank">#37466</a>)</li>
+<li>[reflection]: python: reflection returns <code>original_request</code>. (<a href="https://github.com/grpc/grpc/pull/36944" target="_blank">#36944</a>)</li>
+</ul>
+
+<h2 id="ruby">Ruby</h2>
+
+<ul>
+<li>[ruby] drop ruby 2.7 support. (<a href="https://github.com/grpc/grpc/pull/37430" target="_blank">#37430</a>)</li>
+<li>[ruby] reduce ruby gpr_log invocations from INFO to DEBUG. (<a href="https://github.com/grpc/grpc/pull/37426" target="_blank">#37426</a>)</li>
+<li>[ruby] refactor flaky test and expose cancel_with_status. (<a href="https://github.com/grpc/grpc/pull/37410" target="_blank">#37410</a>)</li>
+</ul>
+<br>
+</body>
+
+</html>
